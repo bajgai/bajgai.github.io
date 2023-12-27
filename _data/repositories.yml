@@ -1,12 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - bajgai
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - bajgai/bajgai.github.io
+  - bajgai/crypto
+  - bajgai/CL
+  - bajgai/ML
+  - bajgai/Algorithms
+
+
