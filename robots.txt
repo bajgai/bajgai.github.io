@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://bajgai.github.io//sitemap.xml
+Sitemap: https://bajgai.ca//sitemap.xml
