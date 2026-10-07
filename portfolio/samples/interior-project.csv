@@ -1,0 +1,19 @@
+record_type,description,amount_usd,notes
+sample,Synthetic interior studio example,,Fictional data; not a client record or Xero export
+project,Client billing,8000,Illustrative billing; accounting treatment requires agreed policy
+project,Materials direct cost,2400,
+project,Labour direct cost,1600,
+project,Subcontractor direct cost,900,
+calculation,Total direct cost,4900,2400 + 1600 + 900
+calculation,Contribution before overhead and bank fee,3100,8000 - 4900
+bank,Opening cash,5000,
+bank,Client receipt,8000,
+bank,Materials payment,-2400,
+bank,Labour payment,-1600,
+bank,Subcontractor payment,-900,
+bank,Bank fee,-30,Missing from ledger before adjustment
+calculation,Closing bank cash,8070,5000 + 8000 - 2400 - 1600 - 900 - 30
+calculation,Unadjusted ledger cash,8100,
+calculation,Ledger bank-fee adjustment,-30,
+calculation,Adjusted ledger cash,8070,
+calculation,Unexplained reconciliation difference,0,
