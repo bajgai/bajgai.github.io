@@ -1,0 +1,21 @@
+SYNTHETIC CREATIVE-STUDIO CLOSE CHECKLIST
+Portfolio practice sample; not a completed client close or Xero export.
+
+1. Confirm reporting period, entities, source-data cutoff and authorized reviewer.
+2. Collect statements for bank, card and payment-gateway accounts.
+3. Match balances and trace differences to individual source transactions.
+4. Sample exception: a $30 bank fee is absent from an $8,100 ledger balance.
+   Record the fee in the sample: adjusted ledger $8,070 matches statement $8,070.
+5. Trace materials, labour and subcontractor costs to their project and source.
+6. Sample direct costs: $2,400 + $1,600 + $900 = $4,900.
+7. Unbilled-cost schedule: $4,900 total less $2,800 allocated = $2,100.
+   This schedule is not by itself the amount recognized as a financial WIP asset.
+   Resolve contract terms and recognition policy with the authorized reviewer.
+8. Royalty settlement: $3,000 sales - $100 refunds - $145 platform fees = $2,755.
+   Fictional contract rate 15%: royalty $413.25; studio share $2,341.75.
+   Confirm the actual agreement's royalty basis and reconcile to the receipt.
+9. Tie payroll preparation to source inputs, pay calendar and approved changes.
+   Confirm jurisdiction, filing responsibility and payment approval separately.
+10. Tie reports to the ledger; retain an exception register and approval evidence.
+
+An unresolved item needs an owner and due date; do not hide it in an accuracy claim.

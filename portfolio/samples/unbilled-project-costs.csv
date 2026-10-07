@@ -1,0 +1,5 @@
+project,category,total_cost_usd,cost_allocated_to_billing_usd,unbilled_cost_usd,notes
+Fictional interior project,Materials,2400,1600,800,Illustrative cost tracking; not a financial WIP asset value
+Fictional interior project,Labour,1600,1200,400,Actual recognition requires contract and accounting policy review
+Fictional interior project,Subcontractor,900,0,900,Synthetic source allocation
+Fictional interior project,TOTAL,4900,2800,2100,Each row is total cost less cost allocated to billing

@@ -1,0 +1,9 @@
+record_type,description,amount_usd,notes
+sample,Synthetic digital art settlement,,Fictional data; not a client record or Xero export
+input,Gross sales,3000,
+input,Refunds,100,
+input,Platform fees,145,
+calculation,Royalty basis,2755,Fictional contract basis is gross sales less refunds and platform fees
+assumption,Royalty percentage,15,Percentage not a dollar amount; illustrative contract
+calculation,Artist royalty,413.25,2755 x 15 percent
+calculation,Studio share before other costs,2341.75,2755 - 413.25
