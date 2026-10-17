@@ -32,7 +32,7 @@ You don't need my numbers. You need yours. Here's the sum, with example figures 
 | **Jobs lost per week** | 8 × 0.5 × 0.4 = **1.6** | |
 | **Revenue lost per month** | 1.6 × $450 × 4.3 ≈ **$3,100** | |
 
-Those example figures are assumptions, not data from a real business. Even if you halve every one of them, most service businesses are still losing more each month than it costs to fix the problem once.
+Those example figures are assumptions, not data from a real business, and the result swings a lot with them: halve all four and the loss drops to about $190 a month. That's why your own numbers matter more than mine. Compare your monthly figure with the one-off cost of fixing it, further down.
 
 To find your real first number, check your phone's call log for one week and count every call you didn't answer and didn't call back within the hour.
 
@@ -47,7 +47,7 @@ A typical setup looks like this:
 3. **The right next step goes out.** Bookings get your calendar link. Quote requests get your two or three standard questions (photos, address, timeline). Emergencies get flagged to your phone straight away.
 4. **You get a summary, not a mess.** Instead of ten voicemails, you see a short list: who called, what they need, what's already been sent, and who's waiting on you.
 
-The same flow works for website forms, Facebook and Instagram messages, and Google Business Profile chats, so every channel gets the same fast reply.
+The same flow works for website forms and Facebook and Instagram messages, so every channel gets the same fast reply.
 
 ## What it costs to fix
 
