@@ -164,6 +164,26 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   }
 }
 
+// Captions inside long-form articles stay caption-styled (sans 12/16),
+// not reading text
+.post article .profile .more-info,
+.post article .profile .more-info p,
+.post article .contact-note {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ink-secondary);
+  max-width: none;
+}
+
+.post article .profile .more-info {
+  margin-top: var(--space-3);
+}
+
+.post article .contact-note {
+  margin-top: var(--space-3);
+}
+
 // Acronyms in running text: spaced small caps
 abbr {
   font-variant-caps: all-small-caps;
