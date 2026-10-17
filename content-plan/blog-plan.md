@@ -79,4 +79,9 @@ File goes in `_posts/YYYY-MM-DD-slug.md`. Do not date a post in the future: the 
 - [x] 4. AI tools and customer data in Alberta: PIPA (published 2026-10-17)
 - [x] 5. From website inquiry to booked appointment (published 2026-10-17, sample flow, no screenshots yet)
 - [x] 6. Stop chasing quotes and invoices by hand (published 2026-10-17)
-- [ ] 7 to 12
+- [x] 7. Catering inquiries, menus and staff schedules: AI for Calgary restaurants (published 2026-10-17)
+- [x] 8. Is your business ready to automate? 10-question checklist (published 2026-10-17, not yet a download)
+- [x] 9. Zapier, Make, n8n or custom (published 2026-10-17)
+- [x] 10. Tenant requests that sort themselves (published 2026-10-17)
+- [x] 11. Why automations break, and what a care plan covers (published 2026-10-17)
+- [ ] 12. 30-day recap: write around 2026-11-16 with Niri's real numbers (traffic, calls booked, builds sold). Do not write it without them.
