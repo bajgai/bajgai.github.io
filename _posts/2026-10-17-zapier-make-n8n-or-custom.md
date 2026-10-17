@@ -17,7 +17,7 @@ Here's how I think about choosing between them, and when none of them is the rig
 
 - **Zapier** charges by the number of **tasks**, which are the individual actions your automations perform. Triggers aren't counted, so an automation with a trigger and four actions that runs 100 times a month uses about 400 tasks.
 - **Make** charges by **operations** or credits, which are similar: each module that runs counts. It's usually cheaper per action than Zapier, but harder to estimate up front.
-- **n8n** is open source. You can run it yourself on your own server, and then you pay for hosting rather than per action, or you can use n8n's paid cloud service, which is priced by usage.
+- **n8n** has a free Community edition you can run on your own server, so you pay for hosting rather than per action, or you can use n8n's paid cloud service. It isn't open source in the strict sense: its Sustainable Use License allows self-hosting for your own business's internal use but restricts things like reselling hosted access, which is fine for most small businesses.
 
 The practical upshot: a low-volume automation is cheap on any of them. A high-volume one (hundreds of runs a day) can get expensive on per-task pricing, and that's where Make or self-hosted n8n start to make sense.
 

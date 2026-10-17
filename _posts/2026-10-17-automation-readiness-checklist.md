@@ -61,4 +61,4 @@ From the questions above, the three that hold most businesses back are:
 
 ## Next step
 
-If you scored 5 or more and want help picking what to automate first, that's exactly what the free discovery call is for. [Book a free 20-minute call](/services/) and bring your answers. If you'd like a written plan with tools, costs and build order, the $149 strategy session covers that, and the fee is credited toward a build.
+If you scored 5 or more and want help picking what to automate first, that's exactly what the free discovery call is for. [Book a free 20-minute call](/services/) and bring your answers. If you'd like a written plan with tools, costs and build order, the $149 strategy session covers that, and the fee comes off any build you order within 30 days.
