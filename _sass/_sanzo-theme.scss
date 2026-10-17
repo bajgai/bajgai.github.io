@@ -99,6 +99,27 @@ table.table a {
   }
 }
 
+// Whole-card links (projects, featured posts): no underline through the card,
+// the title alone underlines on hover
+.projects a,
+.featured-posts a,
+a.card-link,
+a:has(> .card) {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    .card-title {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
 // Headings that are links keep heading color
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: var(--ink);
@@ -263,9 +284,20 @@ textarea,
   &:hover,
   &:focus {
     background-color: var(--ink);
-    color: var(--on-ink);
+    color: var(--on-ink) !important;
     text-decoration: none;
   }
+}
+
+// Outweighs al-folio's pagination and publication hover colors, so labels
+// stay on-ink over the ink fill
+.pagination .page-item .page-link:hover,
+.pagination .page-item .page-link:focus,
+.publications .links a.btn:hover,
+.publications .links a.btn:focus {
+  background-color: var(--ink) !important;
+  border-color: var(--ink) !important;
+  color: var(--on-ink) !important;
 }
 
 .btn-primary,
