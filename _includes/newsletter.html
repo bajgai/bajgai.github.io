@@ -1,0 +1,25 @@
+{%- comment -%}
+  Newsletter sign-up. Posts to Buttondown when site.lead_capture.newsletter_username
+  is set; until then it opens an email to site.email (lead-forms.js builds it).
+{%- endcomment -%}
+{%- assign newsletter_username = site.lead_capture.newsletter_username | strip -%}
+<section class="lead-form lead-form-newsletter" aria-labelledby="newsletter-title">
+  <p class="lead-form-eyebrow">Newsletter</p>
+  <h2 id="newsletter-title">One useful automation, every other week</h2>
+  <p class="lead-form-intro">Short notes for small business owners: a workflow I built, what it saved and how to copy it. No spam, unsubscribe in one click.</p>
+
+  <form class="lead-form-fields lead-form-inline" data-lead-form="newsletter" data-mailto="{{ site.email }}"
+    {%- if newsletter_username != "" %} action="https://buttondown.com/api/emails/embed-subscribe/{{ newsletter_username }}" method="POST"
+    {%- else %} action="mailto:{{ site.email }}?subject=Subscribe%20me%20to%20the%20newsletter" method="POST" enctype="text/plain"
+    {%- endif %}>
+    <div class="lead-form-row">
+      <label for="newsletter-email">Email</label>
+      <input id="newsletter-email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <input type="hidden" name="embed" value="1">
+    <input type="hidden" name="tag" value="bajgai.ca">
+    <button class="btn btn-primary" type="submit">Subscribe</button>
+    <p class="lead-form-status" role="status" aria-live="polite" hidden></p>
+  </form>
+</section>
+<script defer src="{{ '/assets/js/lead-forms.js' | relative_url | bust_file_cache }}"></script>

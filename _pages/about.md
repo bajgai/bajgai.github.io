@@ -16,6 +16,7 @@ news: false # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+contact_form: true  # includes the contact form above the social icons
 ---
 
 Hello, My name is Niranjan. I live in Calgary, Alberta. The intention behind this blog is to record my struggles and success as I develope a VR app on Oculus 3.

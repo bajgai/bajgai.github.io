@@ -106,6 +106,13 @@ wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.
 contact_note: >
   Best way to reach me is via email.
 
+# Lead capture. Paste each value between the quotes and the forms switch over
+# on their own. While a value is empty, the form opens an email to `email`
+# above instead, so nothing on the site breaks.
+lead_capture:
+  contact_form_endpoint: "" # Formspree form URL, e.g. https://formspree.io/f/abcdwxyz
+  newsletter_username: ""   # Buttondown username, e.g. niranjan (from buttondown.com/niranjan)
+
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------
