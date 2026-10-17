@@ -17,7 +17,8 @@ description: A printable 10-question checklist that shows whether your small bus
   body { background: #fff !important; color: #000 !important; padding: 0 !important; }
   .post-header { margin: 0 0 0.5em !important; padding: 0 !important; }
   .post-title { font-size: 22pt !important; margin: 0 !important; }
-  .checklist { font-size: 10.5pt; }
+  .post article .checklist, .post article .checklist p, .post article .checklist li { font-size: 10.5pt !important; line-height: 1.35 !important; }
+  .post article .checklist p { margin-bottom: 0.5em !important; }
   .checklist li { margin-bottom: 0.6em; }
   @page { margin: 1.5cm; }
 }
