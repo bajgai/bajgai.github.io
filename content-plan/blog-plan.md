@@ -30,7 +30,7 @@ categories: <one of: how-to, local, examples, pricing>
 ---
 ```
 
-File goes in `_posts/YYYY-MM-DD-slug.md`. Do not date a post in the future: the build skips future posts.
+File goes in `_posts/YYYY-MM-DD-slug.md`. Do not date a post in the future: the build skips future posts. Posts 3 onward were published on 2026-10-17 instead of the dates in the table, with times so they list in plan order.
 
 ## Schedule (about 3 posts a week)
 
@@ -75,4 +75,8 @@ File goes in `_posts/YYYY-MM-DD-slug.md`. Do not date a post in the future: the 
 
 - [x] 1. Five jobs a small business can hand to AI this month
 - [x] 2. The missed call is the most expensive leak in a Calgary service business
-- [ ] 3 to 12
+- [x] 3. Replying to Google reviews in your own voice (published 2026-10-17)
+- [x] 4. AI tools and customer data in Alberta: PIPA (published 2026-10-17)
+- [x] 5. From website inquiry to booked appointment (published 2026-10-17, sample flow, no screenshots yet)
+- [x] 6. Stop chasing quotes and invoices by hand (published 2026-10-17)
+- [ ] 7 to 12
