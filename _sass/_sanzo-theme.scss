@@ -584,8 +584,10 @@ progress::-moz-progress-bar {
     min-height: 140px;
   }
 
+  // MDB gives .btn a 6px margin, which pushes the button off the field edge
   .btn {
     align-self: flex-start;
+    margin: 0;
   }
 
   .btn:disabled {
