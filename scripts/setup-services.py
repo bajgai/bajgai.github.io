@@ -74,7 +74,8 @@ def stripe(method, path, key, data=None):
 def stripe_all(path, key):
     items, params = [], {"limit": 100}
     while True:
-        page = stripe("GET", path + "?" + urllib.parse.urlencode(params), key)
+        sep = "&" if "?" in path else "?"
+        page = stripe("GET", path + sep + urllib.parse.urlencode(params), key)
         items += page.get("data", [])
         if not page.get("has_more"):
             return items
