@@ -40,7 +40,7 @@ AI can also help write menu descriptions, translate the menu for customers who r
 
 "Are you open on the holiday Monday?" "Do you have gluten-free options?" "Can I bring a cake?" "Is there parking?"
 
-**What helps:** a simple FAQ that an AI assistant can use to answer messages on your website, Facebook and Instagram, with anything it isn't sure about passed to you. Keep the FAQ short and current. When the answer changes, change it in one place.
+**What helps:** a simple FAQ that an AI assistant can use to answer messages on your website, with anything it isn't sure about passed to you. Keep the FAQ short and current. When the answer changes, change it in one place.
 
 ## 4. Staff schedules and shift swaps
 
