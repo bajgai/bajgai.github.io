@@ -1,0 +1,509 @@
+/*******************************************************************************
+ * Sanzo design language, applied over Bootstrap, MDB and al-folio.
+ * Color: combination 296. Type: Source Serif 4 + Source Sans 3 (Bringhurst).
+ * Space and corners: fukinsei. Motion: jo-ha-kyu.
+ ******************************************************************************/
+
+// Base: interface text is Source Sans 3, 16/24, ragged right
+
+html,
+body {
+  background-color: var(--ground);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: var(--leading-interface);
+  font-weight: 400;
+  color: var(--ink);
+  font-synthesis: none;
+  font-variant-numeric: oldstyle-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+p,
+li {
+  hyphens: manual;
+}
+
+// Headings: Source Serif 4, set apart by size alone, never weight
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title,
+.card-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: 0;
+}
+
+h1, .h1 { font-size: 36px; line-height: 48px; }
+h2, .h2 { font-size: 24px; line-height: 36px; }
+h3, .h3,
+h4, .h4 { font-size: 18px; line-height: 28px; }
+h5, .h5,
+h6, .h6 { font-size: 16px; line-height: 24px; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: var(--space-9);
+  margin-bottom: var(--space-3);
+}
+
+// al-folio wraps the first name in .font-weight-bold; keep one weight
+.post-title .font-weight-bold,
+.navbar-brand .font-weight-bold {
+  font-weight: 400 !important;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+small,
+.caption,
+.post-meta,
+.desc,
+.contact-note {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ink-secondary);
+}
+
+.desc {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+// Links: ink-secondary, always underlined
+
+a,
+table.table a {
+  color: var(--ink-secondary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--duration-short) var(--easing-fade);
+
+  &:hover,
+  &:focus {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+}
+
+// Whole-card links (projects, featured posts): no underline through the card,
+// the title alone underlines on hover
+.projects a,
+.featured-posts a,
+a.card-link,
+a:has(> .card) {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    .card-title {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+// Headings that are links keep heading color
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: var(--ink);
+}
+
+// Focus ring: ink
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+// Long-form reading: Source Serif 4, 18/28, measure 45-75 characters
+
+.post article,
+.post .post-content,
+#markdown-content {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: var(--leading-reading);
+  font-variant-numeric: oldstyle-nums;
+
+  p,
+  li {
+    font-size: 18px;
+    line-height: var(--leading-reading);
+    max-width: 66ch;
+  }
+
+  p {
+    margin-bottom: var(--leading-reading);
+  }
+
+  h2,
+  h3 {
+    margin-top: calc(var(--leading-reading) * 2);
+    margin-bottom: var(--leading-reading);
+  }
+}
+
+// Acronyms in running text: spaced small caps
+abbr {
+  font-variant-caps: all-small-caps;
+  letter-spacing: var(--tracking-caps-min);
+  text-decoration: none;
+}
+
+// Tables: figures line up, flush right
+
+table {
+  font-variant-numeric: lining-nums tabular-nums;
+
+  td,
+  th {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  th {
+    font-weight: 600;
+  }
+}
+
+.table td,
+.table th {
+  border-color: var(--ink-secondary);
+}
+
+// Rules
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--ink-secondary);
+  opacity: 0.5;
+}
+
+// Containers: square corners, open edges (a rule on the top only), no shadows
+
+.card,
+.card-body,
+.list-group-item,
+.dropdown-menu,
+.modal-content,
+.img-fluid,
+.rounded,
+.z-depth-1,
+.z-depth-2,
+img,
+figure,
+video,
+pre,
+.highlight {
+  border-radius: var(--radius-0) !important;
+  box-shadow: none !important;
+}
+
+.card {
+  background-color: var(--ground);
+  border: 0;
+  border-top: 1px solid var(--ink-secondary);
+}
+
+.card-body {
+  padding: var(--space-7) var(--space-15) var(--space-7) 0;
+}
+
+.dropdown-menu {
+  background-color: var(--ground);
+  border: 0;
+  border-top: 1px solid var(--ink-secondary);
+}
+
+.dropdown-item {
+  color: var(--ink);
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &.active,
+  &:active {
+    background-color: var(--ground);
+    color: var(--ink);
+    text-decoration: underline;
+  }
+}
+
+// Interactive elements: three square corners, the top-left rounded
+
+.btn,
+button:not(.navbar-toggler):not(#light-toggle):not(.copy),
+input,
+select,
+textarea,
+.form-control,
+.badge,
+.page-link,
+.chip {
+  border-radius: var(--radius-rim) 0 0 0 !important;
+  box-shadow: none !important;
+  font-family: var(--font-sans);
+}
+
+.btn,
+.page-link {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: var(--space-3) var(--space-5);
+  background-color: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  text-decoration: none;
+  transition: background-color var(--duration-short) var(--easing-jo-ha-kyu) var(--pause-short),
+    color var(--duration-short) var(--easing-jo-ha-kyu) var(--pause-short);
+
+  &:hover,
+  &:focus {
+    background-color: var(--ink);
+    color: var(--on-ink) !important;
+    text-decoration: none;
+  }
+}
+
+// Outweighs al-folio's pagination and publication hover colors, so labels
+// stay on-ink over the ink fill
+.pagination .page-item .page-link:hover,
+.pagination .page-item .page-link:focus,
+.publications .links a.btn:hover,
+.publications .links a.btn:focus {
+  background-color: var(--ink) !important;
+  border-color: var(--ink) !important;
+  color: var(--on-ink) !important;
+}
+
+.btn-primary,
+.btn-secondary,
+.page-item.active .page-link {
+  background-color: var(--ink) !important;
+  border-color: var(--ink) !important;
+  color: var(--on-ink) !important;
+}
+
+.form-control,
+input,
+select,
+textarea {
+  background-color: var(--ground);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+// Navbar: a single rule underneath, no fill change
+
+.navbar {
+  background-color: var(--ground) !important;
+  border-bottom: 1px solid var(--ink-secondary);
+  opacity: 1;
+  box-shadow: none;
+}
+
+.navbar.navbar-light {
+  .navbar-brand {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--ink);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+  }
+
+  .navbar-nav .nav-item.active > .nav-link {
+    font-weight: 600;
+    color: var(--ink);
+  }
+}
+
+.navbar-toggler {
+  border-radius: var(--radius-rim) 0 0 0;
+}
+
+.navbar-toggler .icon-bar {
+  background-color: var(--ink);
+  border-radius: 0;
+}
+
+// Footer: ground, a rule on top, caption type
+
+footer.fixed-bottom,
+footer.sticky-bottom {
+  background-color: var(--ground);
+  border-top: 1px solid var(--ink-secondary);
+  font-size: 12px;
+  line-height: 16px;
+
+  .container {
+    color: var(--ink-secondary);
+  }
+
+  a {
+    color: var(--ink-secondary);
+
+    &:hover {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+  }
+}
+
+// Blockquotes: a rule on one side, extra space around
+
+blockquote {
+  background: transparent;
+  border-left: 2px solid var(--ink-secondary);
+  margin: var(--space-9) 0;
+  padding: 0 0 0 var(--space-7);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: var(--leading-reading);
+
+  &.block-tip,
+  &.block-warning,
+  &.block-danger {
+    background-color: transparent;
+  }
+}
+
+// Code
+
+code {
+  color: var(--ink);
+  background-color: var(--global-code-bg-color);
+  border-radius: var(--radius-0);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+pre {
+  background-color: var(--global-code-bg-color);
+  border: 0;
+  border-top: 1px solid var(--ink-secondary);
+}
+
+// Profile and social
+
+.profile .more-info {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ink-secondary);
+
+  p {
+    color: var(--ink-secondary);
+  }
+}
+
+.social {
+  text-align: left;
+
+  .contact-icons {
+    font-size: var(--icon-l);
+    margin-top: var(--space-15);
+
+    a {
+      text-decoration: none;
+      margin-right: var(--space-5);
+
+      i::before {
+        color: var(--ink);
+      }
+
+      &:hover i::before {
+        color: var(--ink-secondary);
+      }
+    }
+  }
+}
+
+// Post lists and tags
+
+.post-list li {
+  border-bottom: 0;
+  border-top: 1px solid var(--ink-secondary);
+}
+
+.post-tags,
+.post-meta {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ink-secondary);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+// Progress bar and status
+
+progress::-webkit-progress-value {
+  background-color: var(--accent);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--accent);
+}
+
+.progress-bar {
+  background-color: var(--accent);
+}
+
+// Layout: fukinsei. Off-center on wide screens, unequal space above and below.
+
+.post-header {
+  margin-top: var(--space-15);
+  margin-bottom: var(--space-9);
+}
+
+@media (min-width: 1200px) {
+  .container.mt-5 {
+    margin-left: calc((100vw - #{$max-content-width}) / 2 - var(--space-21));
+    margin-right: auto;
+  }
+}
+
+// Motion: quiet, and none when reduced motion is requested
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
