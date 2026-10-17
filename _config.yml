@@ -111,7 +111,7 @@ contact_note: >
 # above instead, so nothing on the site breaks.
 lead_capture:
   contact_form_endpoint: "https://formspree.io/f/mqpenrjk" # Formspree form URL, e.g. https://formspree.io/f/abcdwxyz
-  newsletter_username: ""   # Buttondown username, e.g. niranjan (from buttondown.com/niranjan)
+  newsletter_username: "niranjanbajgai90" # Buttondown username, e.g. niranjan (from buttondown.com/niranjan)
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
