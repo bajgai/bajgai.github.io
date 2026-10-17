@@ -53,7 +53,21 @@ Take the missed-call setup from [my earlier post]({% post_url 2026-10-17-missed-
 
 That's a few extra minutes of setup. It's also the difference between "we use AI" being something you're comfortable saying to customers and something you'd rather they didn't ask about.
 
-<!-- NIRI: if you have a standard privacy-policy paragraph you give clients for automations, consider offering it here as a free template. -->
+## A privacy-policy paragraph you can adapt
+
+Here's a starting point for the outside-Canada part of your privacy policy. Replace the parts in square brackets, delete any tools you don't use, and have it checked if your situation is unusual.
+
+> **Service providers outside Canada**
+>
+> We use a small number of service providers to run our business, and some of them store or process personal information outside Canada. These are:
+>
+> - [Tool name], used for [booking appointments / sending email / sorting inquiries], which stores information in [country].
+> - [Tool name], used for [purpose], which stores information in [country].
+>
+> These providers may only use your information for the purposes listed above, and information stored outside Canada may be accessible to authorities in those countries under their laws. If you have questions about how we use service providers outside Canada, or want a copy of our policies, contact [name or job title] at [email or phone].
+
+Keep the list current. When you add or drop a tool, update this paragraph the same day.
+
 
 ## Want a second pair of eyes?
 

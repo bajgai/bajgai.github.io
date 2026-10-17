@@ -13,7 +13,18 @@ The problem is volume. Writing a fresh, thoughtful reply to every "great service
 
 Here's how to use AI to draft replies that still sound like you, and where to draw the line.
 
-<!-- NIRI: if you have your own review replies or a client's (with permission), one short before-and-after example would make this post stronger. -->
+## What the difference looks like
+
+Here's a made-up review for a made-up hair salon, with the kind of reply most owners paste in and the kind this approach produces.
+
+> **Review (5 stars):** "Booked last minute for my sister's wedding and Mei fixed the colour disaster I walked in with. Will be back!"
+
+> **Generic reply:** "Thank you for your review! We appreciate your business."
+
+> **AI draft in the owner's voice:** "So glad Mei could rescue the colour in time for the wedding! Hope the day was wonderful. See you next time. – Lena"
+
+The AI draft takes no longer to approve than the generic line takes to paste, and it tells future customers that a real person reads what they write.
+
 
 ## The rule: AI drafts, you decide
 

@@ -11,7 +11,7 @@ Automation saves the most money in businesses that are already a little bit orga
 
 This checklist takes about five minutes. Answer each question yes or no, honestly. It'll tell you whether you're ready to automate now, and if not, what to sort out first.
 
-<!-- NIRI: decide whether to turn this into a free downloadable PDF in exchange for an email address. If so, link it here. -->
+Want it on paper? There's a [printable version of this checklist](/checklist/) you can fill in by hand or save as a PDF.
 
 ## The questions
 
