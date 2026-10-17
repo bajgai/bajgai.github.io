@@ -110,7 +110,7 @@ contact_note: >
 # on their own. While a value is empty, the form opens an email to `email`
 # above instead, so nothing on the site breaks.
 lead_capture:
-  contact_form_endpoint: "" # Formspree form URL, e.g. https://formspree.io/f/abcdwxyz
+  contact_form_endpoint: "https://formspree.io/f/mqpenrjk" # Formspree form URL
   newsletter_username: ""   # Buttondown username, e.g. niranjan (from buttondown.com/niranjan)
 
 # -----------------------------------------------------------------------------
