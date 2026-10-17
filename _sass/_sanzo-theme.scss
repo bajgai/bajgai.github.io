@@ -516,6 +516,151 @@ progress::-moz-progress-bar {
   }
 }
 
+// Lead capture: contact form and newsletter sign-up. Interface type, a rule on
+// the left like a featured plan on the services page, labels above fields.
+
+.lead-form {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: var(--leading-interface);
+  border-left: 4px solid var(--accent);
+  padding: var(--space-3) 0 var(--space-3) var(--space-5);
+  margin: var(--space-21) 0 var(--space-15);
+  max-width: 640px;
+
+  h2 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-3);
+  }
+
+  p,
+  .post article & p {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: var(--leading-interface);
+    max-width: 60ch;
+    margin-bottom: var(--space-5);
+  }
+}
+
+.lead-form-eyebrow {
+  font-variant-caps: all-small-caps;
+  letter-spacing: var(--tracking-caps-max);
+  color: var(--ink-secondary);
+  margin: 0 !important;
+}
+
+.lead-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+
+  label {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+  }
+
+  input:not([type="hidden"]),
+  textarea {
+    display: block;
+    width: 100%;
+    padding: var(--space-3);
+    font-size: 16px;
+    line-height: var(--leading-interface);
+    font-variant-numeric: lining-nums;
+    transition: border-color var(--duration-short) var(--easing-fade);
+
+    &:focus {
+      outline: 2px solid var(--ink);
+      outline-offset: 3px;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  .btn {
+    align-self: flex-start;
+  }
+
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: progress;
+  }
+
+  .lead-form-status,
+  .lead-form-fine {
+    margin: 0 !important;
+  }
+}
+
+.lead-form-optional {
+  font-weight: 400;
+  color: var(--ink-secondary);
+}
+
+.lead-form-fine {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  color: var(--ink-secondary);
+}
+
+.lead-form-status {
+  color: var(--success);
+  font-weight: 600;
+
+  &.lead-form-status-error {
+    color: var(--error);
+  }
+}
+
+// Spam trap: off-screen for people, still filled by bots
+.lead-form-trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// Newsletter: field and button on one line where there is room
+@media (min-width: 576px) {
+  .lead-form-inline {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    .lead-form-row {
+      flex: 1 1 260px;
+    }
+
+    .btn {
+      align-self: flex-end;
+      padding-top: calc(var(--space-3) + 2px);
+      padding-bottom: calc(var(--space-3) + 2px);
+    }
+
+    .lead-form-status {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .lead-form {
+    margin-top: var(--space-15);
+  }
+
+  .lead-form-fields .btn {
+    align-self: stretch;
+  }
+}
+
 // Motion: quiet, and none when reduced motion is requested
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,41 @@
+{%- comment -%}
+  Contact form. Posts to Formspree when site.lead_capture.contact_form_endpoint
+  is set; until then it opens an email to site.email (lead-forms.js builds it).
+{%- endcomment -%}
+{%- assign contact_endpoint = site.lead_capture.contact_form_endpoint | strip -%}
+<section class="lead-form" id="contact" aria-labelledby="contact-title">
+  <p class="lead-form-eyebrow">Work with me</p>
+  <h2 id="contact-title">Tell me what eats your week</h2>
+  <p class="lead-form-intro">Describe one task you or your team repeat every week. I reply within one business day with whether it can be automated and roughly what it would cost.</p>
+
+  <form class="lead-form-fields" data-lead-form="contact" data-mailto="{{ site.email }}"
+    {%- if contact_endpoint != "" %} action="{{ contact_endpoint }}" method="POST"
+    {%- else %} action="mailto:{{ site.email }}?subject=Automation%20enquiry" method="POST" enctype="text/plain"
+    {%- endif %}>
+    <div class="lead-form-row">
+      <label for="contact-name">Name</label>
+      <input id="contact-name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div class="lead-form-row">
+      <label for="contact-email">Email</label>
+      <input id="contact-email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <div class="lead-form-row">
+      <label for="contact-business">Business <span class="lead-form-optional">(optional)</span></label>
+      <input id="contact-business" name="business" type="text" autocomplete="organization">
+    </div>
+    <div class="lead-form-row">
+      <label for="contact-message">What would you like to automate?</label>
+      <textarea id="contact-message" name="message" rows="5" required></textarea>
+    </div>
+    <input type="hidden" name="_subject" value="New enquiry from bajgai.ca">
+    <div class="lead-form-trap" aria-hidden="true">
+      <label for="contact-gotcha">Leave this empty</label>
+      <input id="contact-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <button class="btn btn-primary" type="submit">Send message</button>
+    <p class="lead-form-status" role="status" aria-live="polite" hidden></p>
+    <p class="lead-form-fine">Prefer email? Write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>. Your details are only used to reply to you.</p>
+  </form>
+</section>
+<script defer src="{{ '/assets/js/lead-forms.js' | relative_url | bust_file_cache }}"></script>

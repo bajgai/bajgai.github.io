@@ -63,6 +63,11 @@ layout: default
             {%- include selected_papers.html %}
           {%- endif %}
 
+          <!-- Contact form -->
+          {%- if page.contact_form %}
+            {% include contact_form.html %}
+          {%- endif %}
+
           <!-- Social -->
           {%- if page.social %}
             <div class="social">
