@@ -13,18 +13,18 @@ full_width: true
   padding: clamp(48px, 7vw, 80px) 20px clamp(64px, 9vw, 96px);
 }
 .sqk-eyebrow {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--indigo);
+  color: var(--rust);
   margin-bottom: 12px;
 }
 .sqk-title {
   margin: 0 0 20px;
   font-family: var(--display);
-  font-weight: 700;
+  font-weight: 500;
   font-size: clamp(36px, 5vw, 48px);
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -51,28 +51,28 @@ full_width: true
   padding: 12px 24px;
   line-height: 1.5;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 0;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.15s ease;
 }
 .sqk-btn-primary {
-  background: #fff; border: 1px solid var(--indigo);
-  color: var(--indigo) !important;
-  box-shadow: 0 8px 22px rgba(79,70,229,0.28);
+  background: var(--paper); border: 1px solid var(--rust);
+  color: var(--rust) !important;
+  box-shadow: none;
 }
 .sqk-btn-secondary {
-  background: #ffffff;
+  background: var(--paper);
   border: 1px solid var(--line);
-  color: var(--indigo) !important;
+  color: var(--rust) !important;
 }
 .sqk-video-wrapper {
   margin: 20px 0 0;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
   background: var(--ink);
-  box-shadow: 0 20px 50px rgba(18,20,31,0.15);
+  box-shadow: none;
 }
 .sqk-video-wrapper video {
   display: block;
@@ -83,7 +83,7 @@ full_width: true
   line-height: 1.7;
 }
 .sqk-note {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: 13px;
   color: var(--muted);
   margin-top: 8px;

@@ -7,7 +7,7 @@
 
 .portfolio-page button, .portfolio-page .button {
   border: 1px solid var(--ink);
-  border-radius: 6px;
+  border-radius: 0;
   background: var(--ink);
   color: var(--global-bg-color);
   padding: var(--space-sm) var(--space-md);
@@ -24,7 +24,7 @@
 .portfolio-page button:focus-visible, .portfolio-page a:focus-visible, .portfolio-page input:focus-visible, .portfolio-page select:focus-visible, .portfolio-page summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .portfolio-page input, .portfolio-page select {
   border: 1px solid var(--ink);
-  border-radius: 6px;
+  border-radius: 0;
   padding: var(--space-xs) var(--space-sm);
   min-width: 0;
   background: var(--band);
@@ -35,10 +35,10 @@
 .portfolio-page .wrap { max-width: 1160px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; }
 .portfolio-page nav { display: flex; gap: var(--space-lg); font-size: 14px; line-height: 20px; }
 
-.portfolio-page .eyebrow { font-family: var(--mono); text-transform: uppercase; letter-spacing: var(--eyebrow-tracking); font-size: 16px; line-height: 24px; font-weight: 400; margin: 0 0 var(--space-sm); color: var(--body); }
-.portfolio-page .dot { border-radius: 50%; width: 8px; height: 8px; display: inline-block; background: var(--indigo); margin-right: var(--space-xs); }
+.portfolio-page .eyebrow { font-family: var(--sans); text-transform: uppercase; letter-spacing: var(--eyebrow-tracking); font-size: 16px; line-height: 24px; font-weight: 400; margin: 0 0 var(--space-sm); color: var(--body); }
+.portfolio-page .dot { border-radius: 0; width: 8px; height: 8px; display: inline-block; background: var(--rust); margin-right: var(--space-xs); }
 
-.portfolio-page h1, .portfolio-page h2, .portfolio-page h3, .portfolio-page h4 { font-family: var(--sans); font-weight: 700; letter-spacing: -0.025em; color: var(--ink); margin: 0 0 var(--space-md); }
+.portfolio-page h1, .portfolio-page h2, .portfolio-page h3, .portfolio-page h4 { font-family: var(--display); font-weight: 500; letter-spacing: -0.025em; color: var(--ink); margin: 0 0 var(--space-md); }
 .portfolio-page h1 { font-size: 48px; line-height: 60px; }
 .portfolio-page h2 { font-size: 36px; line-height: 48px; }
 .portfolio-page h3 { font-size: 24px; line-height: 36px; }
@@ -47,12 +47,12 @@
 .portfolio-page .hero { display: grid; grid-template-columns: 1.4fr .8fr; gap: var(--space-hero); padding-top: 72px; padding-bottom: var(--space-section); align-items: end; }
 .portfolio-page .intro { font-family: var(--sans); font-size: 18px; line-height: var(--reading-leading); max-width: 62ch; margin: var(--space-md) 0 var(--space-lg); }
 .portfolio-page .button { display: inline-flex; gap: var(--space-lg); align-items: center; }
-.portfolio-page .hero-note { border-radius: 24px; background: var(--grad); padding: var(--space-lg) var(--space-lg) var(--space-lg) var(--space-xl); color: var(--global-bg-color); }
-.portfolio-page .hero-note p, .portfolio-page .hero-note span, .portfolio-page .hero-note small { color: var(--global-bg-color); }
+.portfolio-page .hero-note { border-radius: 0; background: var(--band); border: 1px solid var(--muted); padding: var(--space-lg) var(--space-lg) var(--space-lg) var(--space-xl); color: var(--global-bg-color); }
+.portfolio-page .hero-note p, .portfolio-page .hero-note span, .portfolio-page .hero-note small { color: var(--ink); }
 .portfolio-page .note-number { font-size: 12px; line-height: 16px; letter-spacing: var(--caps-tracking); font-variant-numeric: lining-nums tabular-nums; }
-.portfolio-page .hero-note > p { font-family: var(--sans); font-size: 24px; line-height: 36px; margin: var(--space-md) 0; }
-.portfolio-page .note-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); border-top: 1px solid var(--indigo); padding: var(--space-md) 0 0; font-size: 14px; line-height: 20px; }
-.portfolio-page .hero-note small { font-size: 12px; line-height: 16px; display: block; margin-top: var(--space-lg); }
+.portfolio-page .hero-note > p { font-family: var(--display); font-size: 28px; line-height: 36px; margin: var(--space-md) 0; }
+.portfolio-page .note-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); border-top: 1px solid var(--rust); padding: var(--space-md) 0 0; font-size: 14px; line-height: 20px; }
+.portfolio-page .hero-note small { font-size: 14px; line-height: 22px; display: block; margin-top: var(--space-lg); }
 
 .portfolio-page .section { padding-top: var(--space-section); padding-bottom: var(--space-xl); }
 .portfolio-page .section-head { display: flex; justify-content: space-between; align-items: end; gap: var(--space-xl); margin-bottom: var(--space-xl); }
@@ -66,9 +66,9 @@
 .portfolio-page .scope { border-left: 1px solid var(--body); padding-left: var(--space-sm); font-size: 12px !important; line-height: 16px !important; margin-top: var(--space-lg); color: var(--body); }
 .portfolio-page .text-link { font-size: 14px; line-height: 20px; font-weight: 600; }
 
-.portfolio-page .demo { border: 1px solid var(--line); border-radius: 20px; background: var(--band); overflow: hidden; align-self: start; }
+.portfolio-page .demo { border: 1px solid var(--line); border-radius: 0; background: var(--band); overflow: hidden; align-self: start; }
 .portfolio-page .demo-bar { display: flex; justify-content: space-between; align-items: center; gap: var(--space-sm); padding: var(--space-sm) var(--space-md); border-bottom: 1px solid var(--body); font-size: 12px; line-height: 16px; letter-spacing: var(--caps-tracking); color: var(--body); }
-.portfolio-page .pill { padding: 0 var(--space-sm); border: 1px solid var(--body); border-radius: 6px; letter-spacing: 0; white-space: nowrap; color: var(--body); }
+.portfolio-page .pill { padding: 0 var(--space-sm); border: 1px solid var(--body); border-radius: 0; letter-spacing: 0; white-space: nowrap; color: var(--body); }
 
 .portfolio-page .products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-md); padding: var(--space-md); }
 .portfolio-page .product-art { height: 120px; display: grid; place-items: center; font-family: var(--sans); font-size: 60px; color: var(--body); border-top: 1px solid var(--body); }
@@ -114,7 +114,7 @@
 .portfolio-page .tour-brand span { font-family: var(--sans); font-size: 12px; color: #526560; align-self: center; }
 .portfolio-page .landscape { height: 180px; position: relative; overflow: hidden; }
 .portfolio-page .landscape svg { width: 100%; height: 100%; }
-.portfolio-page .landscape > span { position: absolute; bottom: var(--space-sm); left: var(--space-md); color: #fff; font-family: var(--sans); font-size: 24px; line-height: 36px; text-shadow: 0 1px 10px #18322e; }
+.portfolio-page .landscape > span { position: absolute; bottom: var(--space-sm); left: var(--space-md); color: var(--paper); font-family: var(--sans); font-size: 24px; line-height: 36px; text-shadow: 0 1px 10px #18322e; }
 .portfolio-page .tour-body { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-md); padding: var(--space-md); }
 .portfolio-page .tour-body .eyebrow { font-size: 14px; line-height: 20px; margin-bottom: var(--space-xs); color: #526560; }
 .portfolio-page .tour-body h4 { font-family: var(--sans); font-size: 24px; line-height: 36px; margin-bottom: var(--space-sm); }
@@ -128,9 +128,9 @@
 .portfolio-page .booking { background: #f0f3e9; padding: var(--space-sm); align-self: start; display: flex; flex-direction: column; gap: var(--space-sm); }
 .portfolio-page .booking strong { font-size: 14px; }
 .portfolio-page .booking label { font-size: 12px; line-height: 16px; }
-.portfolio-page .booking input { font-size: 14px; width: 100%; background: #fff; color: #2b2f2e; border-color: #2b2f2e; }
-.portfolio-page .booking button { font-size: 14px; padding: var(--space-xs) var(--space-sm); background: #1d6658; border-color: #1d6658; color: #fff; }
-.portfolio-page .booking button:hover { background: #124e43; color: #fff; }
+.portfolio-page .booking input { font-size: 14px; width: 100%; background: var(--paper); color: #2b2f2e; border-color: #2b2f2e; }
+.portfolio-page .booking button { font-size: 14px; padding: var(--space-xs) var(--space-sm); background: #1d6658; border-color: #1d6658; color: var(--paper); }
+.portfolio-page .booking button:hover { background: #124e43; color: var(--paper); }
 .portfolio-page .booking p { font-size: 12px; line-height: 16px; margin: 0; }
 .portfolio-page .tour-frame.mobile .tour-body { grid-template-columns: 1fr; }
 .portfolio-page .tour-frame.mobile .landscape { height: 155px; }
@@ -215,7 +215,7 @@
 .portfolio-page .portfolio-source { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 24px; padding-bottom: 40px; border-top: 1px solid var(--line); }
 .portfolio-page .portfolio-source p { margin: 0; }
 
-.portfolio-page .button { background: #fff; border-color: var(--indigo); color: var(--indigo); }
+.portfolio-page .button { background: var(--paper); border-color: var(--rust); color: var(--rust); }
 .portfolio-page .case > *, .portfolio-page .product { min-width: 0; }
 .portfolio-page .demo-bar { flex-wrap: wrap; }
 @media (max-width: 680px) {
@@ -226,12 +226,16 @@
   .portfolio-page .product-art { grid-row: span 3; height: 96px; }
   .portfolio-page .product button { grid-column: 2; }
 }
-.portfolio-page .button span { color: #fff; }
+.portfolio-page .button span { color: var(--paper); }
 
 /* The portfolio subnav follows the shared chrome; demo palettes stay scoped. */
 .portfolio-page .portfolio-nav { flex-wrap: wrap; gap: 4px; font-family: var(--sans); font-size: 16px; }
-.portfolio-page .portfolio-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 6px; color: var(--body); text-decoration: none; }
+.portfolio-page .portfolio-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 0; color: var(--body); text-decoration: none; }
 .portfolio-page .portfolio-nav a:hover { background: var(--band); color: var(--ink); }
 .portfolio-page h3, .portfolio-page h4 { font-family: var(--sans); }
 
 .portfolio-page h1, .portfolio-page h2 { font-family: var(--display); }
+.portfolio-page .button span { color: inherit; }
+.portfolio-page .landscape > span { background: var(--ink); color: var(--ticket); padding: 6px 12px; font-family: var(--display); }
+.portfolio-page nav a, .portfolio-page .text-link, .portfolio-page .portfolio-source a { display: inline-flex; align-items: center; min-height: 44px; }
+.portfolio-page .note-number, .portfolio-page .numbers dd, .portfolio-page .product > p { font-family: var(--mono); }
