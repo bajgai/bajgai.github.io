@@ -147,3 +147,53 @@ h1, h2, h3, h4, h5, h6 {
 footer.fixed-bottom {
   position: static !important;
 }
+
+// Shared interaction targets and keyboard treatment.
+:focus-visible { outline: 2px solid var(--indigo); outline-offset: 3px; }
+footer :focus-visible { outline-color: #c4c8d6; }
+.nb-links a, .nb-drawer a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px;
+  border-radius: 6px; color: var(--body); font-weight: 500; text-decoration: none; white-space: nowrap;
+  &:hover { color: var(--ink); background: var(--band); }
+  &[aria-current="page"] { color: var(--ink); background: var(--tint); font-weight: 600; }
+}
+.nb-drawer a { display: flex; min-height: 48px; border-bottom: 1px solid var(--line); }
+.nb-book {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px;
+  border: 1px solid var(--indigo); border-radius: 6px; background: var(--indigo);
+  color: #fff; font-weight: 600; white-space: nowrap;
+  &:hover { color: #fff; background: #3730a3; }
+  &.nb-book-secondary { background: #fff; color: var(--indigo); }
+  &.nb-book-secondary:hover { background: var(--tint); }
+}
+.pagination { display: flex; justify-content: center; margin: 40px 0; }
+.pagination ul { display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; gap: 8px; align-items: center; }
+.pagination .page-link {
+  min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center;
+  padding: 0 14px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); font-size: 15px;
+  &:hover { background: var(--band); color: var(--indigo); }
+  &[aria-current="page"] { background: var(--tint); color: var(--ink); font-weight: 600; }
+}
+footer a { min-height: 44px; display: inline-flex; align-items: center; }
+footer a:hover { text-decoration: underline !important; text-underline-offset: 4px; }
+.checklist-page { max-width: 680px; margin: 48px auto 64px; color: var(--text); }
+.checklist-page h1 { font-family: var(--display); line-height: 1.1; }
+.checklist { font-size: 18px; line-height: 1.75; }
+.checklist a { display: inline-flex; align-items: center; min-height: 44px; }
+.checklist .print-button { min-height: 44px; color: var(--indigo); border-color: var(--muted); border-radius: 6px; }
+.checklist ol { padding-left: 1.5em; }
+.checklist li { margin-bottom: 1em; break-inside: avoid; }
+.checklist .box { display: inline-block; width: 1em; height: 1em; border: 1px solid currentColor; margin-right: 0.5em; vertical-align: -0.1em; }
+.checklist .answer { display: block; margin-top: 0.25em; }
+.checklist .notes { display: block; border-bottom: 1px solid currentColor; height: 1.75em; margin-top: 0.25em; }
+.checklist .print-button { font: inherit; padding: 0.5em 1em; border: 1px solid currentColor; background: none; color: inherit; cursor: pointer; border-radius: 4px 0 0 0; }
+@media print {
+  body > header, footer, nav, .print-button, .no-print, .post-description { display: none !important; }
+  body { background: #fff !important; color: #000 !important; padding: 0 !important; }
+  .post-header { margin: 0 0 0.5em !important; padding: 0 !important; }
+  .post-title { font-size: 22pt !important; margin: 0 !important; }
+  .post article .checklist, .post article .checklist p, .post article .checklist li { font-size: 10.5pt !important; line-height: 1.35 !important; }
+  .post article .checklist p { margin-bottom: 0.5em !important; }
+  .checklist li { margin-bottom: 0.6em; }
+  @page { margin: 1.5cm; }
+}

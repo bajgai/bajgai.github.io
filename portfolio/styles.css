@@ -227,3 +227,9 @@
   .portfolio-page .product button { grid-column: 2; }
 }
 .portfolio-page .button span { color: #fff; }
+
+/* The portfolio subnav follows the shared chrome; demo palettes stay scoped. */
+.portfolio-page .portfolio-nav { flex-wrap: wrap; gap: 4px; font-family: var(--sans); font-size: 16px; }
+.portfolio-page .portfolio-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 6px; color: var(--body); text-decoration: none; }
+.portfolio-page .portfolio-nav a:hover { background: var(--band); color: var(--ink); }
+.portfolio-page h3, .portfolio-page h4 { font-family: var(--sans); }

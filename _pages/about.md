@@ -37,7 +37,7 @@ full_width: true
         </div>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-        <a href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: var(--grad); color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none; box-shadow: 0 8px 22px rgba(79,70,229,0.28);">Book a free 20-minute call</a>
+        <a href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: var(--grad); color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none; box-shadow: 0 8px 22px rgba(79,70,229,0.28);">Book a call</a>
         <a href="{{ '/services/' | relative_url }}" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #ffffff; border: 1px solid var(--line); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">See services</a>
       </div>
     </div>

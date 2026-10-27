@@ -6,22 +6,20 @@
     </a>
     <div style="display: flex; align-items: center; gap: 8px;">
       <nav class="nb-links" aria-label="Main" style="display: flex; align-items: center; gap: 4px;">
-        <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page" style="padding: 9px 14px; border-radius: 999px; background: var(--tint); color: var(--ink); font-weight: 600; font-size: 16px; text-decoration: none; white-space: nowrap;"{% else %}style="padding: 9px 14px; border-radius: 999px; color: var(--body); font-weight: 500; font-size: 16px; text-decoration: none; white-space: nowrap;"{% endif %}>Home</a>
-        <a href="{{ '/services/' | relative_url }}" {% if page.url contains '/services/' %}aria-current="page" style="padding: 9px 14px; border-radius: 999px; background: var(--tint); color: var(--ink); font-weight: 600; font-size: 16px; text-decoration: none; white-space: nowrap;"{% else %}style="padding: 9px 14px; border-radius: 999px; color: var(--body); font-weight: 500; font-size: 16px; text-decoration: none; white-space: nowrap;"{% endif %}>Services</a>
-        <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page" style="padding: 9px 14px; border-radius: 999px; background: var(--tint); color: var(--ink); font-weight: 600; font-size: 16px; text-decoration: none; white-space: nowrap;"{% else %}style="padding: 9px 14px; border-radius: 999px; color: var(--body); font-weight: 500; font-size: 16px; text-decoration: none; white-space: nowrap;"{% endif %}>Blog</a>
-        <a href="{{ '/service-quote-kit/' | relative_url }}" {% if page.url contains '/service-quote-kit/' %}aria-current="page" style="padding: 9px 14px; border-radius: 999px; background: var(--tint); color: var(--ink); font-weight: 600; font-size: 16px; text-decoration: none; white-space: nowrap;"{% else %}style="padding: 9px 14px; border-radius: 999px; color: var(--body); font-weight: 500; font-size: 16px; text-decoration: none; white-space: nowrap;"{% endif %}>Service Quote Kit</a>
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Home</a>
+        <a href="{{ '/services/' | relative_url }}" {% if page.url contains '/services/' %}aria-current="page"{% endif %}>Services</a>
+        <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Blog</a>
       </nav>
-      <a href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: var(--grad); color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none; white-space: nowrap;">Book a call</a>
+      <a class="nb-book{% if page.url == '/' or page.url == '/services/' %} nb-book-secondary{% endif %}" href="https://cal.com/niranjan-jygtze/30min">Book a call</a>
       <button id="nb-menu-btn" class="nb-menu" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleNbMenu()" style="width: 44px; height: 44px; flex: 0 0 44px; padding: 0; border: 1px solid var(--line); border-radius: 999px; background: #ffffff; color: var(--ink); align-items: center; justify-content: center; cursor: pointer;">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
       </button>
     </div>
   </div>
   <nav id="nb-drawer" class="nb-drawer" aria-label="Mobile Navigation" style="display: none; flex-direction: column; padding: 4px 20px 16px; border-top: 1px solid var(--line); background: #ffffff;">
-    <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page" style="padding: 12px 4px; border-bottom: 1px solid var(--line); font-weight: 600; font-size: 16px; color: var(--indigo); text-decoration: none;"{% else %}style="padding: 12px 4px; border-bottom: 1px solid var(--line); font-weight: 600; font-size: 16px; color: var(--ink); text-decoration: none;"{% endif %}>Home</a>
-    <a href="{{ '/services/' | relative_url }}" {% if page.url contains '/services/' %}aria-current="page" style="padding: 12px 4px; border-bottom: 1px solid var(--line); font-weight: 600; font-size: 16px; color: var(--indigo); text-decoration: none;"{% else %}style="padding: 12px 4px; border-bottom: 1px solid var(--line); font-weight: 600; font-size: 16px; color: var(--ink); text-decoration: none;"{% endif %}>Services</a>
-    <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page" style="padding: 12px 4px; border-bottom: 1px solid var(--line); font-weight: 600; font-size: 16px; color: var(--indigo); text-decoration: none;"{% else %}style="padding: 12px 4px; border-bottom: 1px solid var(--line); font-weight: 600; font-size: 16px; color: var(--ink); text-decoration: none;"{% endif %}>Blog</a>
-    <a href="{{ '/service-quote-kit/' | relative_url }}" {% if page.url contains '/service-quote-kit/' %}aria-current="page" style="padding: 12px 4px; font-weight: 600; font-size: 16px; color: var(--indigo); text-decoration: none;"{% else %}style="padding: 12px 4px; font-weight: 600; font-size: 16px; color: var(--ink); text-decoration: none;"{% endif %}>Service Quote Kit</a>
+    <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Home</a>
+    <a href="{{ '/services/' | relative_url }}" {% if page.url contains '/services/' %}aria-current="page"{% endif %}>Services</a>
+    <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Blog</a>
   </nav>
 </header>
 <script>
