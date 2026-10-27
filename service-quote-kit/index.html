@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Service Quote Kit – see the example
-description: Preview an editable Service Quote Kit: blank and fictional-example DOCX proposals, matching PPTX decks and reference PDFs. US$9.
+description: "Preview an editable Service Quote Kit: blank and fictional-example DOCX proposals, matching PPTX decks and reference PDFs. US$9."
 permalink: /service-quote-kit/
 full_width: true
 ---
@@ -48,7 +48,9 @@ full_width: true
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 0 24px;
+  padding: 12px 24px;
+  line-height: 1.5;
+  text-align: center;
   border-radius: 999px;
   font-size: 15px;
   font-weight: 600;
@@ -66,7 +68,7 @@ full_width: true
   color: var(--indigo) !important;
 }
 .sqk-video-wrapper {
-  margin: 20px 0;
+  margin: 20px 0 0;
   border-radius: 16px;
   overflow: hidden;
   background: var(--ink);
@@ -75,6 +77,10 @@ full_width: true
 .sqk-video-wrapper video {
   display: block;
   width: 100%;
+}
+.sqk-note.sqk-video-caption {
+  margin: 16px 0 0;
+  line-height: 1.7;
 }
 .sqk-note {
   font-family: var(--mono);
@@ -112,7 +118,7 @@ full_width: true
 }
 </style>
 
-<main class="sqk-main">
+<div class="sqk-main">
   <div class="sqk-eyebrow">Service Quote Kit · Editable documents + deck</div>
   <h1 class="sqk-title">Define the work.<br>Present a clear proposal.</h1>
   <p class="sqk-lead">Compare three packages, record the selected scope and carry the details into a matching six-slide presentation. Start with blank files or use the fictional example as a guide.</p>
@@ -129,7 +135,7 @@ full_width: true
       Your browser cannot play this video. <a href="{{ '/service-quote-kit/service-quote-kit-demo.mp4' | relative_url }}">Download the 40-second demo</a>.
     </video>
   </div>
-  <p class="sqk-note">40 seconds · no narration · actual included document pages · all businesses and example prices are fictional</p>
+  <p class="sqk-note sqk-video-caption">40 seconds · no narration · actual included document pages · all businesses and example prices are fictional</p>
 
   <div class="sqk-grid">
     <section class="sqk-section">
@@ -153,4 +159,4 @@ full_width: true
     <a class="sqk-btn sqk-btn-primary" href="https://payhip.com/b/JTctQ">Open the US$9 kit on Payhip</a>
     <a class="sqk-btn sqk-btn-secondary" href="{{ '/service-quote-kit/service-quote-kit-fictional-preview.pdf' | relative_url }}" download>Read the example first</a>
   </div>
-</main>
+</div>
