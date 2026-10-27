@@ -301,7 +301,7 @@ blockquote {
     width: 22px;
     height: 2px;
     background-color: var(--global-text-color);
-    border-radius: 1px;
+    border-radius: 0;
     margin-bottom: 4px;
     transition: all 0.2s;
   }
@@ -806,7 +806,7 @@ figure.highlight {
 pre {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 6px;
+  border-radius: 0;
   padding: 6px 12px;
 
   pre,
@@ -821,7 +821,7 @@ pre {
 code {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 3px;
+  border-radius: 0;
   padding: 3px 3px;
 }
 

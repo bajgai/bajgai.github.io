@@ -1,22 +1,32 @@
-// Design tokens extracted from Claude Design authoritative outputs
+// Shop ledger: paper, carbon ink, and rust stamps.
 :root {
-  --sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --display: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-
-  --ink: #12141f;
-  --text: #1c2030;
-  --body: #4a5163;
-  --muted: #5b6275;
-  --line: #e4e6ef;
-  --band: #f7f8fc;
-  --tint: #eef0fb;
-  --indigo: #4f46e5;
-  --grad: var(--indigo);
-  --radius-control: 6px;
-  --radius-card: 8px;
-  --danger: #a62c37;
-  --positive: #007190;
+  --paper: #F6F3EC;
+  --band: #EFECE4;
+  --ticket: #FAF8F5;
+  --ink: #1C1B18;
+  --text: #1C1B18;
+  --body: #4A473E;
+  --muted: #5E5A50;
+  --prose: #4A473E;
+  --rust: #9E3B22;
+  --rust-dark: #7A2B17;
+  --tint: #F3E5E0;
+  --line: #D6D0C4;
+  --rule-medium: #B8B0A0;
+  --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --display: 'Newsreader', Georgia, serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --font-sans: var(--sans);
+  --font-serif: var(--display);
+  --font-mono: var(--mono);
+  --ground: var(--paper);
+  --on-ink: var(--ticket);
+  --ink-secondary: var(--body);
+  --accent: var(--rust);
+  --danger: var(--rust-dark);
+  --positive: var(--ink);
+  --radius-control: 0px;
+  --radius-card: 0px;
   --space-xs: 4px;
   --space-sm: 12px;
   --space-md: 20px;
@@ -27,31 +37,9 @@
   --motion-fast: 180ms;
   --motion-normal: 300ms;
   --motion-pause: 60ms;
-  --motion-ease: cubic-bezier(0.6, 0, 0.8, 0.3);
+  --motion-ease: ease;
   --reading-leading: 28px;
   --caps-tracking: 0.05em;
-  --eyebrow-tracking: 0.1em;
-  --prose: #353b4c;
-
-  // Sanzo compatibility tokens
-  --ground: #ffffff;
-  --on-ink: #ffffff;
-  --font-sans: var(--sans);
-  --font-serif: var(--display);
-  --font-mono: var(--mono);
-  --ink-secondary: var(--body);
-
-  // al-folio global mappings
-  --global-bg-color: #ffffff;
-  --global-code-bg-color: var(--band);
-  --global-text-color: var(--text);
-  --global-text-color-light: var(--body);
-  --global-theme-color: var(--indigo);
-  --global-hover-color: #3730a3;
-  --global-hover-text-color: #ffffff;
-  --global-footer-bg-color: #12141f;
-  --global-footer-text-color: #c4c8d6;
-  --global-footer-link-color: #ffffff;
-  --global-divider-color: var(--line);
-  --global-card-bg-color: #ffffff;
+  --eyebrow-tracking: 0.05em;
+  color-scheme: light;
 }

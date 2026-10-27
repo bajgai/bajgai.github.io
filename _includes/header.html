@@ -1,7 +1,9 @@
-<header style="position: relative; background: #ffffff; border-bottom: 1px solid var(--line);">
+<a class="skip-main" href="#main-content">Skip to content</a>
+<div class="status-strip"><div class="ledger-wrap"><span><b class="stamp">Open</b> Taking new projects · Calgary</span><span>AI automation · Calgary, Alberta</span></div></div>
+<header style="position: relative; background: var(--paper); border-bottom: 1px solid var(--line);">
   <div style="max-width: 1160px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
     <a href="{{ '/' | relative_url }}" style="display: flex; align-items: center; gap: 10px; min-width: 0; text-decoration: none; color: var(--ink);">
-      <span class="nb-mark" aria-hidden="true" style="width: 36px; height: 36px; flex: 0 0 36px; border-radius: 6px; background: var(--ink); color: #ffffff; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-weight: 700; font-size: 16px;">NB</span>
+      <span class="nb-mark" aria-hidden="true" style="width: 36px; height: 36px; flex: 0 0 36px; border-radius: 0; background: var(--ink); color: var(--ticket); display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-weight: 700; font-size: 16px;">NB</span>
       <span style="font-family: var(--sans); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; white-space: nowrap;">Niranjan Bajgai</span>
     </a>
     <div style="display: flex; align-items: center; gap: 8px;">
@@ -11,7 +13,7 @@
         <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Blog</a>
       </nav>
       <a class="nb-book{% if page.url == '/' or page.url == '/services/' %} nb-book-secondary{% endif %}" href="https://cal.com/niranjan-jygtze/30min">Book a call</a>
-      <button id="nb-menu-btn" class="nb-menu" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleNbMenu()" style="width: 44px; height: 44px; flex: 0 0 44px; padding: 0; border: 1px solid var(--line); border-radius: 6px; background: #ffffff; color: var(--ink); align-items: center; justify-content: center; cursor: pointer;">
+      <button id="nb-menu-btn" class="nb-menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nb-drawer" onclick="toggleNbMenu()" style="width: 44px; height: 44px; flex: 0 0 44px; padding: 0; border: 1px solid var(--line); border-radius: 0; background: var(--paper); color: var(--ink); align-items: center; justify-content: center; cursor: pointer;">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
       </button>
     </div>
@@ -29,7 +31,7 @@ function toggleNbMenu() {
   if (d) {
     var open = d.style.display === 'flex';
     d.style.display = open ? 'none' : 'flex';
-    if (b) b.setAttribute('aria-expanded', !open);
+    if (b) { b.setAttribute('aria-expanded', String(!open)); b.setAttribute('aria-label', open ? 'Open menu' : 'Close menu'); }
   }
 }
 </script>
