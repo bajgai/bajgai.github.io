@@ -49,7 +49,7 @@ full_width: true
         {%- else %} action="mailto:{{ site.email }}?subject=Subscribe%20me%20to%20the%20newsletter" method="POST" enctype="text/plain"
         {%- endif %}>
         <label for="nl-email-post" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Email address</label>
-        <input id="nl-email-post" name="email" type="email" placeholder="you@business.ca" autocomplete="email" required style="flex: 1 1 220px; min-width: 0; min-height: 50px; padding: 0 20px; border: 1px solid #c9cddb; border-radius: 999px; font-family: var(--sans); font-size: 16px; color: var(--ink); background: #ffffff; box-sizing: border-box;">
+        <input id="nl-email-post" name="email" type="email" placeholder="you@business.ca" autocomplete="email" required style="flex: 1 1 220px; min-width: 0; min-height: 50px; padding: 0 20px; border: 1px solid var(--muted); border-radius: 999px; font-family: var(--sans); font-size: 16px; color: var(--ink); background: #ffffff; box-sizing: border-box;">
         <input type="hidden" name="embed" value="1">
         <input type="hidden" name="tag" value="bajgai.ca">
         <button type="submit" style="flex: 1 0 auto; min-height: 50px; padding: 0 26px; border: 0; border-radius: 999px; background: var(--ink); color: #ffffff; font-family: var(--sans); font-weight: 600; font-size: 16px; cursor: pointer;">Subscribe</button>

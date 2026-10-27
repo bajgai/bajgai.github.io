@@ -63,7 +63,7 @@ full_width: true
         <div style="border: 1px solid #3a3570; background: #1b1a33; border-radius: 12px; padding: 12px 14px; font-weight: 600; font-size: 16px; line-height: 1.35; color: #f2f3f8;">Photos</div>
       </div>
       <div aria-hidden="true" style="width: 2px; height: 18px; margin-left: 28px; background: #6d5ce8;"></div>
-      <div style="border: 1px solid #5b51e0; background: rgba(79,70,229,0.18); border-radius: 14px; padding: 14px 18px;">
+      <div style="border: 1px solid #5b51e0; background: #2b2766; border-radius: 14px; padding: 14px 18px;">
         <div style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: #c4bdff;">2:31 PM · CALENDAR</div>
         <div style="font-weight: 600; font-size: 16px; color: #ffffff;">Site visit booked, details in your inbox</div>
       </div>
