@@ -12,8 +12,25 @@
   --band: #f7f8fc;
   --tint: #eef0fb;
   --indigo: #4f46e5;
-  --violet: #7c3aed;
-  --grad: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  --grad: var(--indigo);
+  --radius-control: 6px;
+  --radius-card: 8px;
+  --danger: #a62c37;
+  --positive: #007190;
+  --space-xs: 4px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 28px;
+  --space-xl: 36px;
+  --space-section: 60px;
+  --space-hero: 84px;
+  --motion-fast: 180ms;
+  --motion-normal: 300ms;
+  --motion-pause: 60ms;
+  --motion-ease: cubic-bezier(0.6, 0, 0.8, 0.3);
+  --reading-leading: 28px;
+  --caps-tracking: 0.05em;
+  --eyebrow-tracking: 0.1em;
   --prose: #353b4c;
 
   // Sanzo compatibility tokens

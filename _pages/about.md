@@ -14,7 +14,7 @@ full_width: true
         <div style="width: 120px; height: 120px; flex: 0 0 120px; box-sizing: border-box; border-radius: 50%; padding: 4px; border: 2px solid var(--indigo); background: #ffffff; box-shadow: 0 10px 30px rgba(79,70,229,0.16);">
           <img src="{{ '/assets/img/niranjan.jpg' | relative_url }}" alt="Portrait of Niranjan Bajgai" style="display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
         </div>
-        <span style="display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px; border: 1px solid var(--line); border-radius: 999px; background: #ffffff; font-weight: 500; font-size: 16px; color: var(--text);">
+        <span style="display: inline-flex; align-items: center; gap: 10px; padding: 6px 0; font-weight: 500; font-size: 16px; color: var(--text);">
           <span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 4px rgba(22,163,74,0.15);"></span>
           Taking new projects · Calgary
         </span>
@@ -24,21 +24,21 @@ full_width: true
       <p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.65; color: var(--body);">I build AI automations that answer leads, sort inboxes, move data between your tools and draft the documents you write every week.</p>
       <div style="width: 100%; max-width: 520px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
         <div style="padding: 14px 12px 14px 0;">
-          <div style="font-family: var(--display); font-weight: 700; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em; color: var(--indigo);">20 min</div>
+          <div style="font-family: var(--sans); font-weight: 700; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em; color: var(--indigo);">20 min</div>
           <div style="font-size: 16px; line-height: 1.4; color: var(--muted);">Free first call</div>
         </div>
         <div style="padding: 14px 12px; border-left: 1px solid var(--line);">
-          <div style="font-family: var(--display); font-weight: 700; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em; color: var(--indigo);">Fixed</div>
+          <div style="font-family: var(--sans); font-weight: 700; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em; color: var(--indigo);">Fixed</div>
           <div style="font-size: 16px; line-height: 1.4; color: var(--muted);">Price quoted first</div>
         </div>
         <div style="padding: 14px 0 14px 12px; border-left: 1px solid var(--line);">
-          <div style="font-family: var(--display); font-weight: 700; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em; color: var(--indigo);">CA · US</div>
+          <div style="font-family: var(--sans); font-weight: 700; font-size: 22px; line-height: 1.2; letter-spacing: -0.02em; color: var(--indigo);">CA · US</div>
           <div style="font-size: 16px; line-height: 1.4; color: var(--muted);">Remote, any city</div>
         </div>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-        <a href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: var(--grad); color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none; box-shadow: 0 8px 22px rgba(79,70,229,0.28);">Book a call</a>
-        <a href="{{ '/services/' | relative_url }}" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #ffffff; border: 1px solid var(--line); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">See services</a>
+        <a href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 6px; background: var(--grad); color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none; box-shadow: 0 8px 22px rgba(79,70,229,0.28);">Book a call</a>
+        <a href="{{ '/services/' | relative_url }}" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 6px; background: #ffffff; border: 1px solid var(--line); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">See services</a>
       </div>
     </div>
 
@@ -80,43 +80,55 @@ full_width: true
       <h2 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: clamp(30px, 4vw, 37px); line-height: 1.1; letter-spacing: -0.025em; color: var(--ink);">The work that eats your week, handed to software</h2>
       <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">Six areas where small service businesses lose the most hours. Most projects start with one of these and grow from there.</p>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 24px;">
-      <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-        <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">01</span>
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Leads &amp; follow-up</h3>
+    <div class="workflow-list" aria-label="Example automation workflows">
+      <article class="workflow-row">
+<div class="workflow-time"><span>7:40 PM · Lead calls</span><span>7:41 PM · Text sent → 8:05 PM · Booked</span></div>
+<div class="workflow-copy">
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Leads &amp; follow-up</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Missed calls texted back, web-form enquiries answered within minutes, and quiet leads followed up until they book or say no.</p>
         <p style="margin: 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--muted);">e.g. missed-call text-back for a plumber</p>
-      </article>
-      <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-        <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">02</span>
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Inbox &amp; support</h3>
+
+</div></article>
+      <article class="workflow-row">
+<div class="workflow-time"><span>9:00 AM · Inbox arrives</span><span>9:01 AM · Sorted → Reply drafted</span></div>
+<div class="workflow-copy">
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Inbox &amp; support</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Incoming email sorted and routed, replies to common questions drafted for you to approve, and requests turned into tickets.</p>
         <p style="margin: 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--muted);">e.g. tenant requests that become work orders</p>
-      </article>
-      <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-        <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">03</span>
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Admin &amp; bookkeeping</h3>
+
+</div></article>
+      <article class="workflow-row">
+<div class="workflow-time"><span>6:00 PM · Day closes</span><span>6:05 PM · Entries checked → Books updated</span></div>
+<div class="workflow-copy">
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Admin &amp; bookkeeping</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Receipts, invoices and payouts moved into QuickBooks or Xero, overdue-invoice reminders sent, and a plain summary at month end.</p>
         <p style="margin: 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--muted);">e.g. Square sales posted to the books nightly</p>
-      </article>
-      <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-        <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">04</span>
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Quotes &amp; documents</h3>
+
+</div></article>
+      <article class="workflow-row">
+<div class="workflow-time"><span>3:10 PM · Visit ends</span><span>3:15 PM · Notes captured → Quote drafted</span></div>
+<div class="workflow-copy">
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Quotes &amp; documents</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Quotes, proposals, reports and letters drafted from a short form or a voice note, in your own format, ready for you to check and send.</p>
         <p style="margin: 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--muted);">e.g. a site-visit voice note becomes a quote</p>
-      </article>
-      <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-        <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">05</span>
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Content &amp; marketing</h3>
+
+</div></article>
+      <article class="workflow-row">
+<div class="workflow-time"><span>4:00 PM · Job finished</span><span>4:05 PM · Photos collected → Follow-up queued</span></div>
+<div class="workflow-copy">
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Content &amp; marketing</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Review requests after every job, Google Business posts, and social drafts made from the photos you already take on site.</p>
         <p style="margin: 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--muted);">e.g. review request when a job is marked done</p>
-      </article>
-      <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-        <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">06</span>
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Small apps &amp; dashboards</h3>
+
+</div></article>
+      <article class="workflow-row">
+<div class="workflow-time"><span>8:00 AM · Work starts</span><span>8:01 AM · Tools synced → Dashboard ready</span></div>
+<div class="workflow-copy">
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Small apps &amp; dashboards</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">A simple tool for when the spreadsheet stops being enough: job trackers, booking boards, reorder lists and one-page dashboards.</p>
         <p style="margin: 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--muted);">e.g. a reorder list for a restaurant kitchen</p>
-      </article>
+
+</div></article>
     </div>
   </div>
 </section>
@@ -132,19 +144,19 @@ full_width: true
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 24px;">
       <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
         <span style="font-family: var(--mono); font-weight: 500; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--indigo);">Contractor</span>
-        <h3 style="margin: 4px 0 0; font-family: var(--display); font-weight: 700; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; color: var(--ink);">Missed-call text-back with job intake and a booking link</h3>
+        <h3 style="margin: 4px 0 0; font-family: var(--sans); font-weight: 700; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; color: var(--ink);">Missed-call text-back with job intake and a booking link</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">When the phone rings on site, a text goes out within one minute. The customer picks their job type, uploads photos and chooses a quote visit from the calendar.</p>
         <p style="margin: 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--muted);">Built with Twilio, Make and Google Calendar</p>
       </article>
       <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
         <span style="font-family: var(--mono); font-weight: 500; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--indigo);">Property manager</span>
-        <h3 style="margin: 4px 0 0; font-family: var(--display); font-weight: 700; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; color: var(--ink);">Tenant emails and texts turned into sorted work orders</h3>
+        <h3 style="margin: 4px 0 0; font-family: var(--sans); font-weight: 700; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; color: var(--ink);">Tenant emails and texts turned into sorted work orders</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Incoming maintenance requests are tagged by urgency, checked against unit numbers and drafted for the right trade, with zero copying between apps.</p>
         <p style="margin: 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--muted);">Built with Claude API, Gmail and Airtable</p>
       </article>
       <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
         <span style="font-family: var(--mono); font-weight: 500; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--indigo);">Bakery &amp; cafe</span>
-        <h3 style="margin: 4px 0 0; font-family: var(--display); font-weight: 700; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; color: var(--ink);">Square sales and supplier invoices posted to QuickBooks nightly</h3>
+        <h3 style="margin: 4px 0 0; font-family: var(--sans); font-weight: 700; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; color: var(--ink);">Square sales and supplier invoices posted to QuickBooks nightly</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Daily sales summaries, card processing fees and PDF supplier invoices matched, reconciled and logged with no Sunday bookkeeping marathon.</p>
         <p style="margin: 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--muted);">Built with Square API, Zapier and QuickBooks Online</p>
       </article>
@@ -162,36 +174,36 @@ full_width: true
     <ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 24px;">
       <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid var(--indigo);">
         <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">01 →</span>
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Talk</h3>
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Talk</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">Twenty minutes, free. You describe the work that eats your week and I tell you honestly whether it is worth automating.</p>
       </li>
       <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid #5f45e3;">
         <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">02 →</span>
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Plan</h3>
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Plan</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">A one-page plan: what it does, which tools it touches, what could go wrong and a fixed price, before any work starts.</p>
       </li>
       <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid #6d3fe0;">
         <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">03 →</span>
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Build</h3>
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Build</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">I build it in your own accounts, test it on real examples, and show you it working before anything goes live.</p>
       </li>
-      <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid var(--violet);">
+      <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid var(--indigo);">
         <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">04 ✓</span>
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Hand over</h3>
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Hand over</h3>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">A short written guide and a recorded walkthrough. Everything stays yours, and a care plan is there if you want one.</p>
       </li>
     </ol>
 
     <div style="border: 1px solid var(--line); border-radius: 20px; background: var(--band); padding: 24px 28px; display: flex; flex-direction: column; gap: 16px;">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px;">
-        <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">What it costs <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; letter-spacing: 0.06em; color: var(--muted);">CAD</span></h3>
+        <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">What it costs <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; letter-spacing: 0.06em; color: var(--muted);">CAD</span></h3>
         <a href="{{ '/services/#pricing' | relative_url }}" style="font-weight: 600; font-size: 16px; color: var(--indigo);">Full pricing and what's included →</a>
       </div>
       <ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 0 24px;">
-        <li style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px;"><span style="color: var(--ink); font-weight: 500;">Discovery call</span><span style="font-family: var(--display); font-weight: 700; color: var(--ink); white-space: nowrap;">$0</span></li>
-        <li style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px;"><span style="color: var(--ink); font-weight: 500;">Strategy session</span><span style="font-family: var(--display); font-weight: 700; color: var(--ink); white-space: nowrap;">$149</span></li>
-        <li style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px;"><span style="color: var(--ink); font-weight: 500;">Automation build</span><span style="font-family: var(--display); font-weight: 700; color: var(--ink); white-space: nowrap;">from $1,200</span></li>
-        <li style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px;"><span style="color: var(--ink); font-weight: 500;">Care plan</span><span style="font-family: var(--display); font-weight: 700; color: var(--ink); white-space: nowrap;">$450/month</span></li>
+        <li style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px;"><span style="color: var(--ink); font-weight: 500;">Discovery call</span><span style="font-family: var(--sans); font-weight: 700; color: var(--ink); white-space: nowrap;">$0</span></li>
+        <li style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px;"><span style="color: var(--ink); font-weight: 500;">Strategy session</span><span style="font-family: var(--sans); font-weight: 700; color: var(--ink); white-space: nowrap;">$149</span></li>
+        <li style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px;"><span style="color: var(--ink); font-weight: 500;">Automation build</span><span style="font-family: var(--sans); font-weight: 700; color: var(--ink); white-space: nowrap;">from $1,200</span></li>
+        <li style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px;"><span style="color: var(--ink); font-weight: 500;">Care plan</span><span style="font-family: var(--sans); font-weight: 700; color: var(--ink); white-space: nowrap;">$450/month</span></li>
       </ul>
     </div>
   </div>
@@ -205,7 +217,7 @@ full_width: true
         <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--indigo);">Latest writing</span>
         <h2 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: clamp(30px, 4vw, 37px); line-height: 1.1; letter-spacing: -0.025em; color: var(--ink);">Notes from the work</h2>
       </div>
-      <a href="{{ '/blog/' | relative_url }}" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 999px; border: 1px solid var(--line); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">All posts</a>
+      <a href="{{ '/blog/' | relative_url }}" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 6px; border: 1px solid var(--line); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">All posts</a>
     </div>
     <ul style="margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line);">
       {% for post in site.posts limit: 3 %}
@@ -213,7 +225,7 @@ full_width: true
         <li style="display: flex; flex-wrap: wrap; gap: 6px 32px; padding: 24px 0; border-bottom: 1px solid var(--line);">
           <span style="flex: 0 0 140px; font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--muted); padding-top: 2px;">{{ post.date | date: "%b %-d, %Y" }}</span>
           <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 4px; min-width: 0;">
-            <a href="{{ post.url | relative_url }}" style="font-family: var(--display); font-weight: 700; font-size: 21px; line-height: 1.3; letter-spacing: -0.015em; color: var(--ink); text-decoration: none;">{{ post.title }}</a>
+            <a href="{{ post.url | relative_url }}" style="font-family: var(--sans); font-weight: 700; font-size: 21px; line-height: 1.3; letter-spacing: -0.015em; color: var(--ink); text-decoration: none;">{{ post.title }}</a>
             <span style="font-size: 16px; color: var(--body);">{{ post.description }}</span>
           </div>
           <span style="flex: 0 0 auto; font-size: 16px; color: var(--muted);">{{ read_time }} min read</span>
@@ -252,10 +264,10 @@ full_width: true
       {%- else %} action="mailto:{{ site.email }}?subject=Subscribe%20me%20to%20the%20newsletter" method="POST" enctype="text/plain"
       {%- endif %}>
       <label for="nl-email-home" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Email address</label>
-      <input id="nl-email-home" name="email" type="email" placeholder="you@business.ca" autocomplete="email" required style="flex: 1 1 220px; min-width: 0; min-height: 50px; padding: 0 20px; border: 1px solid #c9cddb; border-radius: 999px; font-family: var(--sans); font-size: 16px; color: var(--ink); background: #ffffff; box-sizing: border-box;">
+      <input id="nl-email-home" name="email" type="email" placeholder="you@business.ca" autocomplete="email" required style="flex: 1 1 220px; min-width: 0; min-height: 50px; padding: 0 20px; border: 1px solid #c9cddb; border-radius: 6px; font-family: var(--sans); font-size: 16px; color: var(--ink); background: #ffffff; box-sizing: border-box;">
       <input type="hidden" name="embed" value="1">
       <input type="hidden" name="tag" value="bajgai.ca">
-      <button type="submit" style="flex: 1 0 auto; min-height: 50px; padding: 0 26px; border: 0; border-radius: 999px; background: var(--grad); color: #ffffff; font-family: var(--sans); font-weight: 600; font-size: 16px; cursor: pointer;">Subscribe</button>
+      <button type="submit" style="flex: 1 0 auto; min-height: 50px; padding: 0 26px; border: 1px solid var(--muted); border-radius: 6px; background: #ffffff; color: var(--indigo); font-family: var(--sans); font-weight: 600; font-size: 16px; cursor: pointer;">Subscribe</button>
       <p class="lead-form-status" role="status" aria-live="polite" hidden style="width: 100%; margin: 8px 0 0; font-size: 14px; text-align: center;"></p>
     </form>
   </div>

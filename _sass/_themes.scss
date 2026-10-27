@@ -1,36 +1,31 @@
-/*******************************************************************************
- * Themes
- * One theme by decision (Sanzo): the ground is always Sulpher Yellow.
- * The al-folio --global-* variables are mapped onto the Sanzo tokens.
- ******************************************************************************/
-
+// Legacy al-folio components use the shared redesign tokens.
 :root {
-  --global-bg-color: var(--ground);
-  --global-code-bg-color: rgba(52, 69, 76, 0.06);
-  --global-text-color: var(--ink);
-  --global-text-color-light: var(--ink-secondary);
-  --global-theme-color: var(--ink-secondary);
-  --global-hover-color: var(--ink);
-  --global-hover-text-color: var(--on-ink);
-  --global-footer-bg-color: var(--ground);
-  --global-footer-text-color: var(--ink-secondary);
-  --global-footer-link-color: var(--ink-secondary);
-  --global-distill-app-color: var(--ink-secondary);
-  --global-divider-color: var(--ink-secondary);
-  --global-card-bg-color: var(--ground);
+  --global-bg-color: #ffffff;
+  --global-code-bg-color: var(--band);
+  --global-text-color: var(--text);
+  --global-text-color-light: var(--body);
+  --global-theme-color: var(--indigo);
+  --global-hover-color: #3730a3;
+  --global-hover-text-color: #ffffff;
+  --global-footer-bg-color: #12141f;
+  --global-footer-text-color: #c4c8d6;
+  --global-footer-link-color: #ffffff;
+  --global-distill-app-color: var(--body);
+  --global-divider-color: var(--line);
+  --global-card-bg-color: #ffffff;
 
-  --global-tip-block: var(--success);
-  --global-tip-block-bg: var(--ground);
+  --global-tip-block: var(--positive);
+  --global-tip-block-bg: var(--global-bg-color);
   --global-tip-block-text: var(--ink);
-  --global-tip-block-title: var(--success);
-  --global-warning-block: var(--accent);
-  --global-warning-block-bg: var(--ground);
+  --global-tip-block-title: var(--positive);
+  --global-warning-block: var(--indigo);
+  --global-warning-block-bg: var(--global-bg-color);
   --global-warning-block-text: var(--ink);
   --global-warning-block-title: var(--ink);
-  --global-danger-block: var(--error);
-  --global-danger-block-bg: var(--ground);
+  --global-danger-block: var(--danger);
+  --global-danger-block-bg: var(--global-bg-color);
   --global-danger-block-text: var(--ink);
-  --global-danger-block-title: var(--error);
+  --global-danger-block-title: var(--danger);
 
   .fa-sun,
   .fa-moon {

@@ -1,22 +1,22 @@
 <header style="position: relative; background: #ffffff; border-bottom: 1px solid var(--line);">
   <div style="max-width: 1160px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
     <a href="{{ '/' | relative_url }}" style="display: flex; align-items: center; gap: 10px; min-width: 0; text-decoration: none; color: var(--ink);">
-      <span class="nb-mark" aria-hidden="true" style="width: 36px; height: 36px; flex: 0 0 36px; border-radius: 10px; background: var(--grad); color: #ffffff; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 700; font-size: 16px;">NB</span>
-      <span style="font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; white-space: nowrap;">Niranjan Bajgai</span>
+      <span class="nb-mark" aria-hidden="true" style="width: 36px; height: 36px; flex: 0 0 36px; border-radius: 6px; background: var(--ink); color: #ffffff; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-weight: 700; font-size: 16px;">NB</span>
+      <span style="font-family: var(--sans); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; white-space: nowrap;">Niranjan Bajgai</span>
     </a>
     <div style="display: flex; align-items: center; gap: 8px;">
-      <nav class="nb-links" aria-label="Main" style="display: flex; align-items: center; gap: 4px;">
+      <nav class="nb-links" aria-label="Main">
         <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Home</a>
         <a href="{{ '/services/' | relative_url }}" {% if page.url contains '/services/' %}aria-current="page"{% endif %}>Services</a>
         <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Blog</a>
       </nav>
       <a class="nb-book{% if page.url == '/' or page.url == '/services/' %} nb-book-secondary{% endif %}" href="https://cal.com/niranjan-jygtze/30min">Book a call</a>
-      <button id="nb-menu-btn" class="nb-menu" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleNbMenu()" style="width: 44px; height: 44px; flex: 0 0 44px; padding: 0; border: 1px solid var(--line); border-radius: 999px; background: #ffffff; color: var(--ink); align-items: center; justify-content: center; cursor: pointer;">
+      <button id="nb-menu-btn" class="nb-menu" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleNbMenu()" style="width: 44px; height: 44px; flex: 0 0 44px; padding: 0; border: 1px solid var(--line); border-radius: 6px; background: #ffffff; color: var(--ink); align-items: center; justify-content: center; cursor: pointer;">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
       </button>
     </div>
   </div>
-  <nav id="nb-drawer" class="nb-drawer" aria-label="Mobile Navigation" style="display: none; flex-direction: column; padding: 4px 20px 16px; border-top: 1px solid var(--line); background: #ffffff;">
+  <nav id="nb-drawer" class="nb-drawer" aria-label="Mobile Navigation">
     <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Home</a>
     <a href="{{ '/services/' | relative_url }}" {% if page.url contains '/services/' %}aria-current="page"{% endif %}>Services</a>
     <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Blog</a>

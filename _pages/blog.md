@@ -38,7 +38,7 @@ full_width: true
         <li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 28px 0; border-bottom: 1px solid var(--line);">
           <time datetime="{{ post.date | date_to_xmlschema }}" style="flex: 0 0 136px; font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--muted); padding-top: 3px;">{{ post.date | date: "%b %-d, %Y" }}</time>
           <div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 6px; min-width: 0;">
-            <a href="{{ post.url | relative_url }}" style="font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.25; letter-spacing: -0.02em; color: var(--ink); text-decoration: none;">{{ post.title }}</a>
+            <a href="{{ post.url | relative_url }}" style="font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.25; letter-spacing: -0.02em; color: var(--ink); text-decoration: none;">{{ post.title }}</a>
             <p style="margin: 0; font-size: 16px; line-height: 1.65; color: var(--body);">{{ post.description }}</p>
             <span style="font-size: 15px; color: var(--muted);">{{ read_time }} min read{% if post.tags.size > 0 %} · {{ post.tags | join: ", " }}{% endif %}</span>
           </div>
@@ -64,10 +64,10 @@ full_width: true
       {%- else %} action="mailto:{{ site.email }}?subject=Subscribe%20me%20to%20the%20newsletter" method="POST" enctype="text/plain"
       {%- endif %}>
       <label for="nl-email-blog" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Email address</label>
-      <input id="nl-email-blog" name="email" type="email" placeholder="you@business.ca" autocomplete="email" required style="flex: 1 1 260px; min-height: 50px; padding: 0 20px; border: 1px solid #c9cddb; border-radius: 999px; font-family: var(--sans); font-size: 16px; color: var(--ink); background: #ffffff; box-sizing: border-box;">
+      <input id="nl-email-blog" name="email" type="email" placeholder="you@business.ca" autocomplete="email" required style="flex: 1 1 260px; min-height: 50px; padding: 0 20px; border: 1px solid #c9cddb; border-radius: 6px; font-family: var(--sans); font-size: 16px; color: var(--ink); background: #ffffff; box-sizing: border-box;">
       <input type="hidden" name="embed" value="1">
       <input type="hidden" name="tag" value="bajgai.ca">
-      <button type="submit" style="flex: 0 0 auto; min-height: 50px; padding: 0 26px; border: 0; border-radius: 999px; background: var(--grad); color: #ffffff; font-family: var(--sans); font-weight: 600; font-size: 16px; cursor: pointer;">Subscribe</button>
+      <button type="submit" style="flex: 0 0 auto; min-height: 50px; padding: 0 26px; border: 1px solid var(--muted); border-radius: 6px; background: #ffffff; color: var(--indigo); font-family: var(--sans); font-weight: 600; font-size: 16px; cursor: pointer;">Subscribe</button>
       <p class="lead-form-status" role="status" aria-live="polite" hidden style="width: 100%; margin: 8px 0 0; font-size: 14px; text-align: center;"></p>
     </form>
   </div>

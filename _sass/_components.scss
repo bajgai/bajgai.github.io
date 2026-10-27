@@ -37,7 +37,7 @@ img {
   height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font-family: var(--display);
   font-weight: 700;
   color: var(--ink);
@@ -186,7 +186,7 @@ footer a:hover { text-decoration: underline !important; text-underline-offset: 4
 .checklist .box { display: inline-block; width: 1em; height: 1em; border: 1px solid currentColor; margin-right: 0.5em; vertical-align: -0.1em; }
 .checklist .answer { display: block; margin-top: 0.25em; }
 .checklist .notes { display: block; border-bottom: 1px solid currentColor; height: 1.75em; margin-top: 0.25em; }
-.checklist .print-button { font: inherit; padding: 0.5em 1em; border: 1px solid currentColor; background: none; color: inherit; cursor: pointer; border-radius: 4px 0 0 0; }
+.checklist .print-button { font: inherit; padding: 0.5em 1em; border: 1px solid var(--muted); background: none; color: var(--indigo); cursor: pointer; border-radius: 6px; }
 @media print {
   body > header, footer, nav, .print-button, .no-print, .post-description { display: none !important; }
   body { background: #fff !important; color: #000 !important; padding: 0 !important; }
@@ -197,3 +197,19 @@ footer a:hover { text-decoration: underline !important; text-underline-offset: 4
   .checklist li { margin-bottom: 0.6em; }
   @page { margin: 1.5cm; }
 }
+
+h3, h4, h5, h6 { font-family: var(--sans); font-weight: 700; color: var(--ink); }
+
+// Example event sequences echo the lead timeline, without card walls.
+.workflow-list { border-top: 1px solid var(--line); }
+.workflow-row { display: grid; grid-template-columns: minmax(230px, 0.85fr) minmax(0, 1.6fr); gap: 48px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.workflow-time { display: flex; flex-direction: column; gap: 10px; padding-left: 20px; border-left: 2px solid var(--indigo); font-family: var(--mono); font-size: 14px; line-height: 1.6; color: var(--muted); }
+.workflow-time span { color: inherit; }
+.workflow-time span:last-child { color: var(--indigo); }
+.workflow-copy { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+@media (max-width: 760px) {
+  .workflow-row { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 28px 0; }
+}
+
+.nb-links { display: flex; align-items: center; gap: 4px; }
+.nb-drawer { display: none; flex-direction: column; padding: 4px 20px 16px; border-top: 1px solid var(--line); background: #fff; }

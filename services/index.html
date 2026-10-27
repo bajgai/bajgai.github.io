@@ -26,8 +26,8 @@ window.SERVICE_LINKS = {
       <h1 style="margin: 0; max-width: 16em; font-family: var(--display); font-weight: 700; font-size: clamp(38px, 5.6vw, 64px); line-height: 1.04; letter-spacing: -0.035em; color: var(--ink);">Give the repetitive work to software.<br>Keep the judgement for yourself.</h1>
       <p style="margin: 0; max-width: 38em; font-size: 18px; line-height: 1.65; color: var(--body);">I build AI automations that answer leads, sort inboxes, move data between your tools and draft the documents you write every week. You get a working system, written instructions and a fixed price before anything starts.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
-        <a data-link="discovery" href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: var(--indigo); color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none; box-shadow: 0 8px 22px rgba(79,70,229,0.28);">Book a call</a>
-        <a href="#pricing" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #ffffff; border: 1px solid var(--line); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">See pricing</a>
+        <a data-link="discovery" href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 6px; background: var(--indigo); color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none; box-shadow: 0 8px 22px rgba(79,70,229,0.28);">Book a call</a>
+        <a href="#pricing" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 6px; background: #ffffff; border: 1px solid var(--line); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">See pricing</a>
       </div>
     </div>
   </section>
@@ -40,37 +40,49 @@ window.SERVICE_LINKS = {
         <h2 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: clamp(30px, 4vw, 37px); line-height: 1.1; letter-spacing: -0.025em; color: var(--ink);">Six places small businesses lose the most hours</h2>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">Most projects start with one of these workflows and grow from there.</p>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 24px;">
-        <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-          <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">01</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Leads and follow-up</h3>
+      <div class="workflow-list" aria-label="Example automation workflows">
+        <article class="workflow-row">
+<div class="workflow-time"><span>7:40 PM · Lead calls</span><span>7:41 PM · Text sent → 8:05 PM · Booked</span></div>
+<div class="workflow-copy">
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Leads and follow-up</h3>
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">New enquiries from your site, forms or ads land in your CRM, get a personal reply within minutes and a reminder if nobody answers.</p>
-        </article>
-        <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-          <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">02</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Inbox and support</h3>
+
+</div></article>
+        <article class="workflow-row">
+<div class="workflow-time"><span>9:00 AM · Inbox arrives</span><span>9:01 AM · Sorted → Reply drafted</span></div>
+<div class="workflow-copy">
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Inbox and support</h3>
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Messages are sorted, tagged and answered in draft, with an assistant that knows your services and hands anything unusual to you.</p>
-        </article>
-        <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-          <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">03</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Admin and bookkeeping</h3>
+
+</div></article>
+        <article class="workflow-row">
+<div class="workflow-time"><span>6:00 PM · Day closes</span><span>6:05 PM · Entries checked → Books updated</span></div>
+<div class="workflow-copy">
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Admin and bookkeeping</h3>
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Invoices, receipts and timesheets are read, checked and entered into your accounting or payroll tools, with a log you can audit.</p>
-        </article>
-        <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-          <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">04</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Quotes and documents</h3>
+
+</div></article>
+        <article class="workflow-row">
+<div class="workflow-time"><span>3:10 PM · Visit ends</span><span>3:15 PM · Notes captured → Quote drafted</span></div>
+<div class="workflow-copy">
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Quotes and documents</h3>
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Proposals, reports and contracts are drafted from a short form, in your format and wording, ready for a final read.</p>
-        </article>
-        <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-          <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">05</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Content and marketing</h3>
+
+</div></article>
+        <article class="workflow-row">
+<div class="workflow-time"><span>4:00 PM · Job finished</span><span>4:05 PM · Photos collected → Follow-up queued</span></div>
+<div class="workflow-copy">
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Content and marketing</h3>
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">One recording or article becomes posts, a newsletter and clips, scheduled across the channels you already use.</p>
-        </article>
-        <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-          <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">06</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Small apps and dashboards</h3>
+
+</div></article>
+        <article class="workflow-row">
+<div class="workflow-time"><span>8:00 AM · Work starts</span><span>8:01 AM · Tools synced → Dashboard ready</span></div>
+<div class="workflow-copy">
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 23px; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink);">Small apps and dashboards</h3>
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); flex-grow: 1;">Internal tools, booking flows and live dashboards that pull your numbers into one page, built on the apps you pay for already.</p>
-        </article>
+
+</div></article>
       </div>
     </div>
   </section>
@@ -87,35 +99,35 @@ window.SERVICE_LINKS = {
         <!-- Discovery call -->
         <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 22px; padding: 28px 24px; display: flex; flex-direction: column; gap: 18px;">
           <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">Start here</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Discovery call</h3>
-          <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: var(--display); font-weight: 700; font-size: 40px; letter-spacing: -0.03em; color: var(--ink);">$0</span><span style="font-size: 16px; color: var(--muted);">/ 20 min</span></div>
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Discovery call</h3>
+          <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: var(--sans); font-weight: 700; font-size: 40px; letter-spacing: -0.03em; color: var(--ink);">$0</span><span style="font-size: 16px; color: var(--muted);">/ 20 min</span></div>
           <ul style="margin: 0; padding: 0 0 0 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.55; color: var(--body); flex-grow: 1;">
             <li>Talk through the task that eats your week</li>
             <li>Honest answer on whether automation fits</li>
             <li>Rough price range before we hang up</li>
           </ul>
-          <a class="button" data-link="discovery" href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 999px; border: 1px solid #c9cddb; color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">Book a call</a>
+          <a class="button" data-link="discovery" href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 6px; border: 1px solid #c9cddb; color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">Book a call</a>
         </article>
 
         <!-- Strategy session -->
         <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 22px; padding: 28px 24px; display: flex; flex-direction: column; gap: 18px;">
           <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">Plan</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Strategy session</h3>
-          <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: var(--display); font-weight: 700; font-size: 40px; letter-spacing: -0.03em; color: var(--ink);">$149</span><span style="font-size: 16px; color: var(--muted);">/ 60 min</span></div>
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Strategy session</h3>
+          <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: var(--sans); font-weight: 700; font-size: 40px; letter-spacing: -0.03em; color: var(--ink);">$149</span><span style="font-size: 16px; color: var(--muted);">/ 60 min</span></div>
           <ul style="margin: 0; padding: 0 0 0 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.55; color: var(--body); flex-grow: 1;">
             <li>Walk-through of your tools and workflows</li>
             <li>Written automation plan within 2 business days</li>
             <li>Tools, costs and the order to build in</li>
             <li>Fee credited toward a build</li>
           </ul>
-          <a class="button" data-link="strategy" href="mailto:bajgainiranjan@gmail.com?subject=Strategy%20session%20(%24149)" style="display: inline-flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 999px; border: 1px solid #c9cddb; color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">Pay and book, $149</a>
+          <a class="button" data-link="strategy" href="mailto:bajgainiranjan@gmail.com?subject=Strategy%20session%20(%24149)" style="display: inline-flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 6px; border: 1px solid #c9cddb; color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">Pay and book, $149</a>
         </article>
 
         <!-- Automation build -->
         <article style="background: #ffffff; border: 2px solid var(--indigo); border-radius: 22px; padding: 27px 23px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 18px 44px rgba(79,70,229,0.14);">
           <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">Main service · Fixed price</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Automation build</h3>
-          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px;"><span style="font-size: 16px; color: var(--muted);">from</span><span style="font-family: var(--display); font-weight: 700; font-size: 40px; letter-spacing: -0.03em; color: var(--ink);">$1,200</span><span style="font-size: 16px; color: var(--muted);">fixed</span></div>
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Automation build</h3>
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px;"><span style="font-size: 16px; color: var(--muted);">from</span><span style="font-family: var(--sans); font-weight: 700; font-size: 40px; letter-spacing: -0.03em; color: var(--ink);">$1,200</span><span style="font-size: 16px; color: var(--muted);">fixed</span></div>
           <ul style="margin: 0; padding: 0 0 0 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.55; color: var(--body); flex-grow: 1;">
             <li>One workflow built end to end</li>
             <li>Connects up to 4 of your tools</li>
@@ -124,21 +136,21 @@ window.SERVICE_LINKS = {
             <li>30 days of fixes included</li>
           </ul>
           <p style="margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted);">The final price is agreed in writing after the discovery call. The deposit holds your start date; the balance is due on delivery.</p>
-          <a class="button primary" data-link="build" href="mailto:bajgainiranjan@gmail.com?subject=Automation%20build" style="display: inline-flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 999px; background: #ffffff; border: 1px solid var(--muted); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">Reserve a build, $600 deposit</a>
+          <a class="button primary" data-link="build" href="mailto:bajgainiranjan@gmail.com?subject=Automation%20build" style="display: inline-flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 6px; background: #ffffff; border: 1px solid var(--muted); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">Reserve a build, $600 deposit</a>
         </article>
 
         <!-- Care plan -->
         <article style="background: #ffffff; border: 1px solid var(--line); border-radius: 22px; padding: 28px 24px; display: flex; flex-direction: column; gap: 18px;">
           <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">Ongoing</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Care plan</h3>
-          <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: var(--display); font-weight: 700; font-size: 40px; letter-spacing: -0.03em; color: var(--ink);">$450</span><span style="font-size: 16px; color: var(--muted);">/ month</span></div>
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Care plan</h3>
+          <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-family: var(--sans); font-weight: 700; font-size: 40px; letter-spacing: -0.03em; color: var(--ink);">$450</span><span style="font-size: 16px; color: var(--muted);">/ month</span></div>
           <ul style="margin: 0; padding: 0 0 0 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.55; color: var(--body); flex-grow: 1;">
             <li>Monitoring and fixes for your automations</li>
             <li>Up to 5 hours of improvements each month</li>
             <li>Reply within 1 business day</li>
             <li>Cancel any month</li>
           </ul>
-          <a class="button" data-link="care" href="mailto:bajgainiranjan@gmail.com?subject=Care%20plan%20(%24450%20per%20month)" style="display: inline-flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 999px; border: 1px solid #c9cddb; color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">Start the care plan</a>
+          <a class="button" data-link="care" href="mailto:bajgainiranjan@gmail.com?subject=Care%20plan%20(%24450%20per%20month)" style="display: inline-flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 6px; border: 1px solid #c9cddb; color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">Start the care plan</a>
         </article>
       </div>
       <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--muted);"><a href="{{ '/service-quote-kit/' | relative_url }}">Service Quote Kit (US$9)</a>. GST is added where it applies. Software subscriptions your automations run on (for example Zapier, Make or an AI model) are billed to you directly, so you keep ownership.</p>
@@ -155,22 +167,22 @@ window.SERVICE_LINKS = {
       <ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 24px;">
         <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid var(--indigo);">
           <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">01</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Talk</h3>
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Talk</h3>
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">A free 20-minute call to find the task worth automating first.</p>
         </li>
         <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid #5f45e3;">
           <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">02</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Plan</h3>
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Plan</h3>
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">A short written scope with the price, the tools and what done looks like.</p>
         </li>
         <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid #6d3fe0;">
           <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">03</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Build</h3>
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Build</h3>
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">I build and test it against your real examples, with check-ins as it takes shape.</p>
         </li>
-        <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid var(--violet);">
+        <li style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid var(--indigo);">
           <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; color: var(--indigo);">04</span>
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Hand over</h3>
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink);">Hand over</h3>
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">You get the system, a guide and 30 days of fixes, then keep it or add a care plan.</p>
         </li>
       </ol>
@@ -186,7 +198,7 @@ window.SERVICE_LINKS = {
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 24px;">
         <div style="border: 1px solid #bfe3cb; background: #f2fbf5; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 16px;">
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: #14532d;">Good fit</h3>
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: #14532d;">Good fit</h3>
           <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px;">
             <li style="display: flex; gap: 12px; font-size: 16px; line-height: 1.55; color: var(--text);">
               <span style="color: #15803d; font-weight: 700;">✓</span>
@@ -203,7 +215,7 @@ window.SERVICE_LINKS = {
           </ul>
         </div>
         <div style="border: 1px solid #fecaca; background: #fef2f2; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 16px;">
-          <h3 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: #7f1d1d;">Not a fit</h3>
+          <h3 style="margin: 0; font-family: var(--sans); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: #7f1d1d;">Not a fit</h3>
           <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px;">
             <li style="display: flex; gap: 12px; font-size: 16px; line-height: 1.55; color: var(--text);">
               <span style="color: #b91c1c; font-weight: 700;">✕</span>
@@ -233,23 +245,23 @@ window.SERVICE_LINKS = {
       </div>
       <div style="display: flex; flex-direction: column; border-top: 1px solid var(--line);">
         <details open style="border-bottom: 1px solid var(--line); padding: 20px 0;">
-          <summary style="cursor: pointer; font-family: var(--display); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink);">Which tools do you work with?</summary>
+          <summary style="cursor: pointer; font-family: var(--sans); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink);">Which tools do you work with?</summary>
           <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: var(--body);">Google Workspace, Microsoft 365, Zapier, Make, n8n, Airtable, Notion, HubSpot, QuickBooks, Stripe, Shopify and the OpenAI and Anthropic models, among others. If your tool has an API or an export, it can usually join in.</p>
         </details>
         <details style="border-bottom: 1px solid var(--line); padding: 20px 0;">
-          <summary style="cursor: pointer; font-family: var(--display); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink);">What happens to my data?</summary>
+          <summary style="cursor: pointer; font-family: var(--sans); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink);">What happens to my data?</summary>
           <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: var(--body);">Automations run in accounts you own. I use only the access a workflow needs, and you can remove my access at any time.</p>
         </details>
         <details style="border-bottom: 1px solid var(--line); padding: 20px 0;">
-          <summary style="cursor: pointer; font-family: var(--display); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink);">What if the automation is not a fit?</summary>
+          <summary style="cursor: pointer; font-family: var(--sans); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink);">What if the automation is not a fit?</summary>
           <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: var(--body);">You will hear that on the free call. If a build cannot do what the written scope says, I fix it or refund the deposit.</p>
         </details>
         <details style="border-bottom: 1px solid var(--line); padding: 20px 0;">
-          <summary style="cursor: pointer; font-family: var(--display); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink);">Do you work outside Calgary?</summary>
+          <summary style="cursor: pointer; font-family: var(--sans); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink);">Do you work outside Calgary?</summary>
           <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: var(--body);">Yes. Everything happens by video call and screen share, anywhere in Canada or the United States.</p>
         </details>
         <details style="border-bottom: 1px solid var(--line); padding: 20px 0;">
-          <summary style="cursor: pointer; font-family: var(--display); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink);">How do I pay?</summary>
+          <summary style="cursor: pointer; font-family: var(--sans); font-weight: 700; font-size: 20px; letter-spacing: -0.015em; color: var(--ink);">How do I pay?</summary>
           <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.7; color: var(--body);">By card through Stripe, a secure checkout. Larger builds can be invoiced in two parts.</p>
         </details>
       </div>
@@ -266,8 +278,8 @@ window.SERVICE_LINKS = {
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">Editable proposal documents and a matching six-slide deck for quoting your own services. Not ready for a custom build? Start here.</p>
         </div>
         <div style="flex: 0 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 16px;">
-          <span style="font-family: var(--display); font-weight: 700; font-size: 32px; letter-spacing: -0.03em; color: var(--ink);">US$9</span>
-          <a href="{{ '/service-quote-kit/' | relative_url }}" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #ffffff; border: 1px solid var(--muted); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">See the kit</a>
+          <span style="font-family: var(--sans); font-weight: 700; font-size: 32px; letter-spacing: -0.03em; color: var(--ink);">US$9</span>
+          <a href="{{ '/service-quote-kit/' | relative_url }}" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 6px; background: #ffffff; border: 1px solid var(--muted); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">See the kit</a>
         </div>
       </article>
     </div>
@@ -280,8 +292,8 @@ window.SERVICE_LINKS = {
       <h2 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: clamp(30px, 4vw, 37px); line-height: 1.1; letter-spacing: -0.025em; color: var(--ink);">Tell me what eats your week</h2>
       <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">Book a free 20-minute call, or describe one repetitive task by email. I reply within one business day with whether it can be automated and roughly what it would cost.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px;">
-        <a class="button primary" data-link="discovery" href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: var(--grad); color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none; box-shadow: 0 8px 22px rgba(79,70,229,0.28);">Book a call</a>
-        <a class="button" href="mailto:bajgainiranjan@gmail.com?subject=Automation%20question" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; border: 1px solid var(--line); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">Email a question</a>
+        <a class="button primary" data-link="discovery" href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 6px; background: var(--grad); color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none; box-shadow: 0 8px 22px rgba(79,70,229,0.28);">Book a call</a>
+        <a class="button" href="mailto:bajgainiranjan@gmail.com?subject=Automation%20question" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 6px; border: 1px solid var(--line); color: var(--indigo); font-weight: 600; font-size: 16px; text-decoration: none;">Email a question</a>
       </div>
     </div>
   </section>
