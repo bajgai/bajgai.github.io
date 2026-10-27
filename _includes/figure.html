@@ -25,7 +25,7 @@
       {% if include.alt %}alt="{{ include.alt }}"{% endif %}
       {% if include.title %}title="{{ include.title }}"{% endif %}
       {% if include.zoomable %}data-zoomable{% endif %}
-      onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+      onerror="this.onerror=null; var s=this.parentElement.querySelector('source'); if(s) s.remove();"
     />
   </picture>
 
