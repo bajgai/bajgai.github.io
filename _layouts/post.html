@@ -1,92 +1,70 @@
 ---
 layout: default
+full_width: true
 ---
 <!-- _layouts/post.html -->
-{%- assign year = page.date | date: "%Y" -%}
-{%- assign tags = page.tags | join: "" -%}
-{%- assign categories = page.categories | join: "" -%}
-
-{% if page._styles %}
-<!-- Page/Post style -->
-<style type="text/css">
-  {{ page._styles }}
-</style>
-{% endif %}
-
-{% assign url_beginning = page.url | slice: 0, 6 %}
-
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{%- if page.author -%} • {{ page.author }}{%- endif -%}{%- if page.meta -%} • {{ page.meta }}{%- endif -%}</p>
-    <p class="post-tags">
-      {% if url_beginning == '/blog/' -%}
-      <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
-      {% else %}
-      <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
-      {%- endif %}
-      {%- if tags != "" %}
-      &nbsp; &middot; &nbsp;
-        {% for tag in page.tags -%}
-          {% if url_beginning == '/blog/' -%}
-          <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a> &nbsp;
-          {% else %}
-          <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }} &nbsp;
-          {%- endif %}
-
-          {% endfor -%}
-      {% endif %}
-
-      {%- if categories != "" %}
-      &nbsp; &middot; &nbsp;
-        {% for category in page.categories -%}
-          {% if url_beginning == '/blog/' -%}
-          <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}"> <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a> &nbsp;
-          {% else %}
-          <i class="fa-solid fa-tag fa-sm"></i> {{ category }} &nbsp;
-          {%- endif %}
-        {% endfor -%}
-      {% endif %}
-
-    </p>
-  </header>
-
-  <article class="post-content">
-    {% if page.toc and page.toc.beginning %}
-    <div id="table-of-contents">
-      {% toc %}
-    </div>
-    <hr>
+<main>
+  <article class="post-measure" style="display: flex; flex-direction: column;">
+    <a href="{{ '/blog/' | relative_url }}" style="align-self: flex-start; font-weight: 600; font-size: 16px; color: var(--indigo); text-decoration: none; margin-bottom: 28px;">← All writing</a>
+    {% if page.tags.size > 0 %}
+      <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--indigo); margin-bottom: 14px;">{{ page.tags | join: " · " }}</span>
     {% endif %}
-    <div id="markdown-content">
+    <h1 style="margin: 0 0 24px; font-family: var(--display); font-weight: 700; font-size: clamp(36px, 5vw, 52px); line-height: 1.06; letter-spacing: -0.035em; color: var(--ink);">{{ page.title }}</h1>
+    
+    <div style="display: flex; align-items: center; gap: 14px; padding-bottom: 28px; margin-bottom: 36px; border-bottom: 1px solid var(--line);">
+      <div style="width: 52px; height: 52px; flex: 0 0 52px; box-sizing: border-box; border-radius: 50%; padding: 2px; border: 2px solid var(--indigo); background: #ffffff;">
+        <img src="{{ '/assets/img/niranjan.jpg' | relative_url }}" alt="Niranjan Bajgai" style="display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+      </div>
+      <div style="display: flex; flex-direction: column; line-height: 1.4;">
+        <span style="font-weight: 600; font-size: 16px; color: var(--ink);">Niranjan Bajgai</span>
+        <span style="font-size: 16px; color: var(--muted);"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> · {% assign read_time = page.content | number_of_words | divided_by: 180 | plus: 1 %}{{ read_time }} min read</span>
+      </div>
+    </div>
+
+    <div class="post-content-body">
       {{ content }}
     </div>
+
+    <!-- More notes (related posts) -->
+    <nav aria-label="More notes" style="margin-top: 56px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+      <h2 style="margin: 0; padding: 20px 0 4px; font-family: var(--mono); font-weight: 500; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--indigo);">More notes</h2>
+      {% for rpost in site.related_posts limit: 3 %}
+        {% assign r_read_time = rpost.content | number_of_words | divided_by: 180 | plus: 1 %}
+        <a href="{{ rpost.url | relative_url }}" style="display: flex; flex-direction: column; gap: 2px; padding: 16px 0; border-bottom: 1px solid var(--line); text-decoration: none;">
+          <span style="font-family: var(--display); font-weight: 700; font-size: 20px; line-height: 1.3; letter-spacing: -0.015em; color: var(--ink);">{{ rpost.title }} →</span>
+          <span style="font-size: 16px; color: var(--muted);">{{ r_read_time }} min read{% if rpost.tags.size > 0 %} · {{ rpost.tags | join: ", " }}{% endif %}</span>
+        </a>
+      {% endfor %}
+    </nav>
+
+    <!-- Newsletter -->
+    <section aria-label="Newsletter" style="margin-top: 40px; padding: clamp(24px, 5vw, 32px); border-radius: 24px; background: var(--band); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--indigo);">Newsletter</span>
+      <h2 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 26px; line-height: 1.15; letter-spacing: -0.025em; color: var(--ink);">Get the next post by email</h2>
+      <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">One practical automation idea when I publish something new. Unsubscribe in one click.</p>
+      {%- assign newsletter_username = site.lead_capture.newsletter_username | strip -%}
+      <form style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px;"
+        data-lead-form="newsletter" data-mailto="{{ site.email }}"
+        {%- if newsletter_username != "" %} action="https://buttondown.com/api/emails/embed-subscribe/{{ newsletter_username }}" method="POST"
+        {%- else %} action="mailto:{{ site.email }}?subject=Subscribe%20me%20to%20the%20newsletter" method="POST" enctype="text/plain"
+        {%- endif %}>
+        <label for="nl-email-post" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Email address</label>
+        <input id="nl-email-post" name="email" type="email" placeholder="you@business.ca" autocomplete="email" required style="flex: 1 1 220px; min-width: 0; min-height: 50px; padding: 0 20px; border: 1px solid #c9cddb; border-radius: 999px; font-family: var(--sans); font-size: 16px; color: var(--ink); background: #ffffff; box-sizing: border-box;">
+        <input type="hidden" name="embed" value="1">
+        <input type="hidden" name="tag" value="bajgai.ca">
+        <button type="submit" style="flex: 1 0 auto; min-height: 50px; padding: 0 26px; border: 0; border-radius: 999px; background: var(--ink); color: #ffffff; font-family: var(--sans); font-weight: 600; font-size: 16px; cursor: pointer;">Subscribe</button>
+        <p class="lead-form-status" role="status" aria-live="polite" hidden style="width: 100%; margin: 8px 0 0; font-size: 14px; text-align: center;"></p>
+      </form>
+    </section>
+
+    <!-- Book a call CTA -->
+    <aside style="margin-top: 24px; padding: 2px; border-radius: 26px; background: var(--grad);">
+      <div style="border-radius: 24px; background: #ffffff; padding: clamp(24px, 5vw, 32px); display: flex; flex-direction: column; align-items: flex-start; gap: 14px;">
+        <span style="font-family: var(--mono); font-weight: 500; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--indigo);">Work with me</span>
+        <h2 style="margin: 0; font-family: var(--display); font-weight: 700; font-size: 28px; line-height: 1.15; letter-spacing: -0.025em; color: var(--ink);">Want this running for your business?</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.7; color: var(--body);">In a free 20-minute call I'll look at how calls reach you today and tell you what a text-back would take to set up, and what it would cost.</p>
+        <a href="https://cal.com/niranjan-jygtze/30min" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: var(--grad); color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none; box-shadow: 0 8px 22px rgba(79,70,229,0.28);">Book a free 20-minute call</a>
+      </div>
+    </aside>
   </article>
-
-  {%- if page.related_publications != null and page.related_publications.size > 0 -%}
-  {% assign publications = page.related_publications | replace: ", ", "," | split: "," | join: "|" %}
-  <h2>References</h2>
-  <div class="publications">
-    {% bibliography -f {{ site.scholar.bibliography }} -q @*[key^={{ publications }}]* %}
-  </div>
-  {%- endif %}
-
-  {%- if url_beginning == '/blog/' and page.newsletter != false -%}
-    {% include newsletter.html %}
-  {%- endif %}
-
-  {%- if site.related_blog_posts.enabled -%}
-    {%- if page.related_posts == null or page.related_posts -%}
-      {% include related_posts.html %}
-    {%- endif %}
-  {%- endif %}
-
-  {%- if site.disqus_shortname and page.disqus_comments -%}
-    {% include disqus.html %}
-  {%- endif %}
-  {%- if site.giscus and page.giscus_comments -%}
-    {% include giscus.html %}
-  {%- endif -%}
-
-</div>
+</main>

@@ -1,17 +1,33 @@
 {%- if paginator.total_pages > 1 -%}
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item {% unless paginator.previous_page %}disabled{% endunless %}">
-      <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" tabindex="-1" aria-disabled="{{ paginator.previous_page }}">Newer</a>
-    </li>
+<nav aria-label="Blog pagination" style="display: flex; justify-content: center; margin: 40px 0;">
+  <ul style="display: flex; list-style: none; padding: 0; margin: 0; gap: 8px; align-items: center;">
+    {%- if paginator.previous_page -%}
+      {% assign prev_clean = paginator.previous_page_path | replace: 'index.html', '' %}
+      <li>
+        <a href="{{ prev_clean | relative_url }}" style="display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0 16px; border: 1px solid var(--line); border-radius: 999px; color: var(--indigo); font-weight: 600; font-size: 15px; text-decoration: none;">Newer</a>
+      </li>
+    {%- endif -%}
     {%- if paginator.page_trail -%}
       {% for trail in paginator.page_trail -%}
-        <li class="page-item {% if page.url == trail.path %}active{% endif %}"><a class="page-link" href="{{ trail.path | relative_url }}" title="{{trail.title}}">{{ trail.num }}</a></li>
+        {% assign trail_clean = trail.path | replace: 'index.html', '' %}
+        {% assign page_clean = page.url | replace: 'index.html', '' %}
+        {% if page_clean == trail_clean %}
+          <li>
+            <span style="display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 12px; border-radius: 999px; background: var(--indigo); color: #ffffff; font-weight: 600; font-size: 15px;">{{ trail.num }}</span>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ trail_clean | relative_url }}" title="{{ trail.title }}" style="display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); font-weight: 500; font-size: 15px; text-decoration: none;">{{ trail.num }}</a>
+          </li>
+        {% endif %}
       {% endfor -%}
     {%- endif -%}
-    <li class="page-item {% unless paginator.next_page %}disabled{% endunless %}">
-      <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">Older</a>
-    </li>
+    {%- if paginator.next_page -%}
+      {% assign next_clean = paginator.next_page_path | replace: 'index.html', '' %}
+      <li>
+        <a href="{{ next_clean | relative_url }}" style="display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0 16px; border: 1px solid var(--line); border-radius: 999px; color: var(--indigo); font-weight: 600; font-size: 15px; text-decoration: none;">Older</a>
+      </li>
+    {%- endif -%}
   </ul>
 </nav>
 {%- endif -%}
