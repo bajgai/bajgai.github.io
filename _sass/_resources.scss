@@ -8,7 +8,9 @@
 .resource-index h2 { font-family: var(--sans); font-size: 16px; font-weight: 600; letter-spacing: 0; margin: 24px 0 12px; }
 .resource-catalog .resource-index ul { list-style: none; padding: 0; margin: 0; }
 .resource-index li { border-bottom: 1px solid var(--rule-medium); }
-.resource-page a { color: var(--rust); text-decoration: underline; display: inline-flex; align-items: center; min-height: 44px; }
+.resource-page a { color: var(--rust); text-decoration: underline; }
+/* Standalone links (list entries, index) get 44px targets; links inside prose stay inline (WCAG 2.5.8 inline exception). */
+.resource-page li > a:only-child, .resource-index a { display: inline-flex; align-items: center; min-height: 44px; }
 .resource-index a { width: 100%; font-size: 14px; line-height: 1.6; padding: 12px 0; color: var(--ink); text-decoration: none; }
 .resource-index a:hover { color: var(--rust); text-decoration: underline; }
 .resource-catalog > .ledger-section { grid-column: 2; padding: 36px 0; }
