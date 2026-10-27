@@ -1,30 +1,15 @@
-/* Sanzo design language: tokens and fonts come from /assets/css/sanzo.css.
-   Color: combination 296 (pan, same-tone). Containers square with open edges,
-   controls round the top-left corner only. Spacing in odd multiples of 4px. */
+/* Portfolio content is scoped to preserve the shared header and footer. */
+.portfolio-page * { box-sizing: border-box; }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: var(--space-7); }
-body {
-  margin: 0;
-  background: var(--ground);
-  color: var(--ink);
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: var(--leading-interface);
-  font-synthesis: none;
-  font-variant-numeric: oldstyle-nums;
-  -webkit-font-smoothing: antialiased;
-}
-a { color: var(--ink-secondary); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:hover { color: var(--ink); }
-button, input, select { font: inherit; }
+.portfolio-page a { color: var(--body); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.portfolio-page a:hover { color: var(--ink); }
+.portfolio-page button, .portfolio-page input, .portfolio-page select { font: inherit; }
 
-/* Controls: one rounded corner */
-button, .button {
+.portfolio-page button, .portfolio-page .button {
   border: 1px solid var(--ink);
-  border-radius: var(--radius-rim) 0 0 0;
+  border-radius: 999px;
   background: var(--ink);
-  color: var(--on-ink);
+  color: var(--ground);
   padding: var(--space-3) var(--space-5);
   cursor: pointer;
   font-size: 14px;
@@ -33,213 +18,212 @@ button, .button {
   text-decoration: none;
   transition: background-color var(--duration-short) var(--easing-jo-ha-kyu) var(--pause-short), color var(--duration-short) var(--easing-jo-ha-kyu) var(--pause-short);
 }
-button:hover, .button:hover { background: transparent; color: var(--ink); text-decoration: none; }
-button:disabled { opacity: .45; cursor: default; }
-button:disabled:hover { background: var(--ink); color: var(--on-ink); }
-button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-input, select {
+.portfolio-page button:hover, .portfolio-page .button:hover { background: transparent; color: var(--ink); text-decoration: none; }
+.portfolio-page button:disabled { opacity: .45; cursor: default; }
+.portfolio-page button:disabled:hover { background: var(--ink); color: var(--ground); }
+.portfolio-page button:focus-visible, .portfolio-page a:focus-visible, .portfolio-page input:focus-visible, .portfolio-page select:focus-visible, .portfolio-page summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.portfolio-page input, .portfolio-page select {
   border: 1px solid var(--ink);
-  border-radius: var(--radius-rim) 0 0 0;
+  border-radius: 999px;
   padding: var(--space-1) var(--space-3);
   min-width: 0;
-  background: var(--ground);
+  background: var(--band);
   color: var(--ink);
   font-variant-numeric: lining-nums tabular-nums;
 }
 
-/* Page frame: off-center, the open side on the right */
-.wrap { max-width: 1220px; margin-left: auto; margin-right: auto; padding-left: var(--space-15); padding-right: var(--space-21); }
-.header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-7); padding-top: var(--space-7); padding-bottom: var(--space-7); border-bottom: 1px solid var(--ink-secondary); }
-.header a { text-decoration: none; color: var(--ink); }
-.header a:hover { text-decoration: underline; }
-.wordmark { font-family: var(--font-serif); font-size: 18px; line-height: 28px; text-decoration: none; color: var(--ink); }
-.wordmark span { font-family: var(--font-sans); font-size: 14px; color: var(--ink-secondary); margin-left: var(--space-1); }
-nav { display: flex; gap: var(--space-7); font-size: 14px; line-height: 20px; }
-.small-link { font-size: 14px; line-height: 20px; }
+.portfolio-page .wrap { max-width: 1160px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; }
+.portfolio-page nav { display: flex; gap: var(--space-7); font-size: 14px; line-height: 20px; }
 
-.eyebrow { font-variant-caps: all-small-caps; letter-spacing: var(--tracking-caps-max); font-size: 16px; line-height: 24px; font-weight: 400; margin: 0 0 var(--space-3); color: var(--ink-secondary); }
-.dot { width: 8px; height: 8px; display: inline-block; background: var(--accent); margin-right: var(--space-1); }
+.portfolio-page .eyebrow { font-family: var(--mono); text-transform: uppercase; letter-spacing: var(--tracking-caps-max); font-size: 16px; line-height: 24px; font-weight: 400; margin: 0 0 var(--space-3); color: var(--body); }
+.portfolio-page .dot { border-radius: 50%; width: 8px; height: 8px; display: inline-block; background: var(--indigo); margin-right: var(--space-1); }
 
-h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; letter-spacing: 0; color: var(--ink); margin: 0 0 var(--space-5); }
-h1 { font-size: 48px; line-height: 60px; }
-h2 { font-size: 36px; line-height: 48px; }
-h3 { font-size: 24px; line-height: 36px; }
-h4 { font-size: 18px; line-height: 28px; }
+.portfolio-page h1, .portfolio-page h2, .portfolio-page h3, .portfolio-page h4 { font-family: var(--display); font-weight: 700; letter-spacing: -0.025em; color: var(--ink); margin: 0 0 var(--space-5); }
+.portfolio-page h1 { font-size: 48px; line-height: 60px; }
+.portfolio-page h2 { font-size: 36px; line-height: 48px; }
+.portfolio-page h3 { font-size: 24px; line-height: 36px; }
+.portfolio-page h4 { font-size: 18px; line-height: 28px; }
 
-/* Hero: weight on the left, open space on the right */
-.hero { display: grid; grid-template-columns: 1.4fr .8fr; gap: var(--space-21); padding-top: var(--space-35); padding-bottom: var(--space-15); align-items: end; }
-.intro { font-family: var(--font-serif); font-size: 18px; line-height: var(--leading-reading); max-width: 62ch; margin: var(--space-5) 0 var(--space-7); }
-.button { display: inline-flex; gap: var(--space-7); align-items: center; }
-.hero-note { background: var(--ink); padding: var(--space-7) var(--space-7) var(--space-7) var(--space-9); color: var(--on-ink); }
-.hero-note p, .hero-note span, .hero-note small { color: var(--on-ink); }
-.note-number { font-size: 12px; line-height: 16px; letter-spacing: var(--tracking-caps-min); font-variant-numeric: lining-nums tabular-nums; }
-.hero-note > p { font-family: var(--font-serif); font-size: 24px; line-height: 36px; margin: var(--space-5) 0; }
-.note-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); border-top: 1px solid var(--accent); padding: var(--space-5) 0 0; font-size: 14px; line-height: 20px; }
-.hero-note small { font-size: 12px; line-height: 16px; display: block; margin-top: var(--space-7); }
+.portfolio-page .hero { display: grid; grid-template-columns: 1.4fr .8fr; gap: var(--space-21); padding-top: 72px; padding-bottom: var(--space-15); align-items: end; }
+.portfolio-page .intro { font-family: var(--sans); font-size: 18px; line-height: var(--leading-reading); max-width: 62ch; margin: var(--space-5) 0 var(--space-7); }
+.portfolio-page .button { display: inline-flex; gap: var(--space-7); align-items: center; }
+.portfolio-page .hero-note { border-radius: 24px; background: var(--grad); padding: var(--space-7) var(--space-7) var(--space-7) var(--space-9); color: var(--ground); }
+.portfolio-page .hero-note p, .portfolio-page .hero-note span, .portfolio-page .hero-note small { color: var(--ground); }
+.portfolio-page .note-number { font-size: 12px; line-height: 16px; letter-spacing: var(--tracking-caps-min); font-variant-numeric: lining-nums tabular-nums; }
+.portfolio-page .hero-note > p { font-family: var(--display); font-size: 24px; line-height: 36px; margin: var(--space-5) 0; }
+.portfolio-page .note-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); border-top: 1px solid var(--indigo); padding: var(--space-5) 0 0; font-size: 14px; line-height: 20px; }
+.portfolio-page .hero-note small { font-size: 12px; line-height: 16px; display: block; margin-top: var(--space-7); }
 
-.section { padding-top: var(--space-15); padding-bottom: var(--space-9); }
-.section-head { display: flex; justify-content: space-between; align-items: end; gap: var(--space-9); margin-bottom: var(--space-9); }
-.section-head h2 { margin-bottom: 0; }
-.section-head > p { font-size: 14px; line-height: 20px; color: var(--ink-secondary); max-width: 350px; margin: 0 0 var(--space-1); }
+.portfolio-page .section { padding-top: var(--space-15); padding-bottom: var(--space-9); }
+.portfolio-page .section-head { display: flex; justify-content: space-between; align-items: end; gap: var(--space-9); margin-bottom: var(--space-9); }
+.portfolio-page .section-head h2 { margin-bottom: 0; }
+.portfolio-page .section-head > p { font-size: 14px; line-height: 20px; color: var(--body); max-width: 350px; margin: 0 0 var(--space-1); }
 
-/* Case studies: a rule on top only */
-.case { display: grid; grid-template-columns: .65fr 1.35fr; gap: var(--space-15); padding: var(--space-9) 0 var(--space-15); border-top: 1px solid var(--ink-secondary); scroll-margin-top: var(--space-7); }
-.case-copy > p:not(.eyebrow) { font-size: 16px; line-height: 24px; }
-.features { padding-left: var(--space-5); font-size: 14px; line-height: 20px; }
-.features li { margin: var(--space-1) 0; }
-.scope { border-left: 1px solid var(--ink-secondary); padding-left: var(--space-3); font-size: 12px !important; line-height: 16px !important; margin-top: var(--space-7); color: var(--ink-secondary); }
-.text-link { font-size: 14px; line-height: 20px; font-weight: 600; }
+.portfolio-page .case { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); gap: var(--space-15); padding: var(--space-9) 0 var(--space-15); border-top: 1px solid var(--body); scroll-margin-top: var(--space-7); }
+.portfolio-page .case-copy > p:not(.eyebrow) { font-size: 16px; line-height: 24px; }
+.portfolio-page .features { padding-left: var(--space-5); font-size: 14px; line-height: 20px; }
+.portfolio-page .features li { margin: var(--space-1) 0; }
+.portfolio-page .scope { border-left: 1px solid var(--body); padding-left: var(--space-3); font-size: 12px !important; line-height: 16px !important; margin-top: var(--space-7); color: var(--body); }
+.portfolio-page .text-link { font-size: 14px; line-height: 20px; font-weight: 600; }
 
-/* Demo panels: open edges (top and left rules), square corners */
-.demo { border-top: 1px solid var(--ink-secondary); border-left: 1px solid var(--ink-secondary); background: var(--ground); overflow: hidden; align-self: start; }
-.demo-bar { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-5); border-bottom: 1px solid var(--ink-secondary); font-size: 12px; line-height: 16px; letter-spacing: var(--tracking-caps-min); color: var(--ink-secondary); }
-.pill { padding: 0 var(--space-3); border: 1px solid var(--ink-secondary); border-radius: var(--radius-rim) 0 0 0; letter-spacing: 0; white-space: nowrap; color: var(--ink-secondary); }
+.portfolio-page .demo { border: 1px solid var(--line); border-radius: 20px; background: var(--band); overflow: hidden; align-self: start; }
+.portfolio-page .demo-bar { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-5); border-bottom: 1px solid var(--body); font-size: 12px; line-height: 16px; letter-spacing: var(--tracking-caps-min); color: var(--body); }
+.portfolio-page .pill { padding: 0 var(--space-3); border: 1px solid var(--body); border-radius: 999px; letter-spacing: 0; white-space: nowrap; color: var(--body); }
 
-.products { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); padding: var(--space-5); }
-.product-art { height: 120px; display: grid; place-items: center; font-family: var(--font-serif); font-size: 60px; color: var(--ink-secondary); border-top: 1px solid var(--ink-secondary); }
-.art-one .product-art, .art-one { background: transparent; }
-.art-two { background: transparent; }
-.art-three { background: transparent; }
-.product h4 { font-size: 16px; line-height: 24px; margin: var(--space-3) 0 0; }
-.product p { font-size: 14px; line-height: 20px; margin: 0 0 var(--space-3); font-variant-numeric: lining-nums tabular-nums; }
-.product button { font-size: 14px; padding: var(--space-1) var(--space-3); width: 100%; }
-.cart-row { display: flex; justify-content: space-between; gap: var(--space-3); align-items: center; padding: var(--space-3) var(--space-5); border-top: 1px solid var(--ink-secondary); font-size: 14px; line-height: 20px; font-variant-numeric: lining-nums tabular-nums; }
-.cart-row button { padding: var(--space-1) var(--space-5); }
-.staff { padding: var(--space-5); }
-.demo-caption { display: flex; justify-content: space-between; font-size: 14px; line-height: 20px; gap: var(--space-3); }
-.demo-caption span { color: var(--ink-secondary); }
-#order-note { font-size: 14px; line-height: 20px; color: var(--ink-secondary); }
-.order-row { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); border-top: 1px solid var(--ink-secondary); padding: var(--space-3) 0; font-size: 14px; line-height: 20px; font-variant-numeric: lining-nums tabular-nums; }
-.order-row button { font-size: 12px; line-height: 16px; padding: var(--space-1) var(--space-3); }
+.portfolio-page .products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); padding: var(--space-5); }
+.portfolio-page .product-art { height: 120px; display: grid; place-items: center; font-family: var(--display); font-size: 60px; color: var(--body); border-top: 1px solid var(--body); }
+.portfolio-page .art-one .product-art, .portfolio-page .art-one { background: transparent; }
+.portfolio-page .art-two { background: transparent; }
+.portfolio-page .art-three { background: transparent; }
+.portfolio-page .product h4 { font-size: 16px; line-height: 24px; margin: var(--space-3) 0 0; }
+.portfolio-page .product p { font-size: 14px; line-height: 20px; margin: 0 0 var(--space-3); font-variant-numeric: lining-nums tabular-nums; }
+.portfolio-page .product button { font-size: 14px; padding: var(--space-1) var(--space-3); width: 100%; }
+.portfolio-page .cart-row { display: flex; justify-content: space-between; gap: var(--space-3); align-items: center; padding: var(--space-3) var(--space-5); border-top: 1px solid var(--body); font-size: 14px; line-height: 20px; font-variant-numeric: lining-nums tabular-nums; }
+.portfolio-page .cart-row button { padding: var(--space-1) var(--space-5); }
+.portfolio-page .staff { padding: var(--space-5); }
+.portfolio-page .demo-caption { display: flex; justify-content: space-between; font-size: 14px; line-height: 20px; gap: var(--space-3); }
+.portfolio-page .demo-caption span { color: var(--body); }
+.portfolio-page #order-note { font-size: 14px; line-height: 20px; color: var(--body); }
+.portfolio-page .order-row { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); border-top: 1px solid var(--body); padding: var(--space-3) 0; font-size: 14px; line-height: 20px; font-variant-numeric: lining-nums tabular-nums; }
+.portfolio-page .order-row button { font-size: 12px; line-height: 16px; padding: var(--space-1) var(--space-3); }
 
-.crm-controls { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-3); padding: var(--space-5); font-size: 14px; line-height: 20px; }
-.crm-controls select { font-size: 14px; }
-.crm-controls span { margin-left: auto; font-variant-numeric: lining-nums tabular-nums; }
-.pipeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); padding: 0 var(--space-5) var(--space-5); }
-.lane { border-top: 1px solid var(--ink-secondary); padding: var(--space-3) 0; min-height: 210px; }
-.lane h4 { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 600; margin-bottom: var(--space-3); }
-.lead { border-left: 1px solid var(--ink-secondary); padding: var(--space-1) 0 var(--space-1) var(--space-3); margin-bottom: var(--space-5); min-width: 0; }
-.lead strong { font-size: 14px; line-height: 20px; display: block; }
-.lead p { font-size: 12px; line-height: 16px; margin: var(--space-1) 0 var(--space-3); color: var(--ink-secondary); font-variant-numeric: lining-nums tabular-nums; }
-.lead button { font-size: 12px; line-height: 16px; padding: var(--space-1) var(--space-3); }
-.empty { font-size: 14px; color: var(--ink-secondary); }
-.quiet { background: transparent; color: var(--ink); }
-.quiet:hover { background: var(--ink); color: var(--on-ink); }
-.reset { margin: 0 var(--space-5) var(--space-5); font-size: 14px; padding: var(--space-1) var(--space-5); }
+.portfolio-page .crm-controls { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-3); padding: var(--space-5); font-size: 14px; line-height: 20px; }
+.portfolio-page .crm-controls select { font-size: 14px; }
+.portfolio-page .crm-controls span { margin-left: auto; font-variant-numeric: lining-nums tabular-nums; }
+.portfolio-page .pipeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); padding: 0 var(--space-5) var(--space-5); }
+.portfolio-page .lane { border-top: 1px solid var(--body); padding: var(--space-3) 0; min-height: 210px; }
+.portfolio-page .lane h4 { font-family: var(--sans); font-size: 14px; line-height: 20px; font-weight: 600; margin-bottom: var(--space-3); }
+.portfolio-page .lead { border-left: 1px solid var(--body); padding: var(--space-1) 0 var(--space-1) var(--space-3); margin-bottom: var(--space-5); min-width: 0; }
+.portfolio-page .lead strong { font-size: 14px; line-height: 20px; display: block; }
+.portfolio-page .lead p { font-size: 12px; line-height: 16px; margin: var(--space-1) 0 var(--space-3); color: var(--body); font-variant-numeric: lining-nums tabular-nums; }
+.portfolio-page .lead button { font-size: 12px; line-height: 16px; padding: var(--space-1) var(--space-3); }
+.portfolio-page .empty { font-size: 14px; color: var(--body); }
+.portfolio-page .quiet { background: transparent; color: var(--ink); }
+.portfolio-page .quiet:hover { background: var(--ink); color: var(--ground); }
+.portfolio-page .reset { margin: 0 var(--space-5) var(--space-5); font-size: 14px; padding: var(--space-1) var(--space-5); }
 
-.view-switch { display: flex; gap: var(--space-1); }
-.view-switch button { font-size: 12px; line-height: 16px; padding: var(--space-1) var(--space-3); background: transparent; color: var(--ink); }
-.view-switch button[aria-pressed=true] { background: var(--ink); color: var(--on-ink); }
+.portfolio-page .view-switch { display: flex; gap: var(--space-1); }
+.portfolio-page .view-switch button { font-size: 12px; line-height: 16px; padding: var(--space-1) var(--space-3); background: transparent; color: var(--ink); }
+.portfolio-page .view-switch button[aria-pressed=true] { background: var(--ink); color: var(--ground); }
 
-/* The Coast & Field sample is a concept for a fictional client, so its own
-   illustration colours stay; only the frame follows Sanzo. */
-.tour-demo { background: var(--ground); }
-.tour-frame { background: #fffefa; color: #2b2f2e; max-width: 100%; margin: 0 auto; transition: max-width var(--duration-medium) var(--easing-jo-ha-kyu); }
-.tour-frame h4, .tour-frame p, .tour-frame li, .tour-frame summary, .tour-frame strong, .tour-frame label { color: #2b2f2e; }
-.tour-frame.mobile { max-width: 330px; }
-.tour-brand { display: flex; justify-content: space-between; padding: var(--space-3) var(--space-5); font-family: var(--font-serif); font-size: 18px; line-height: 28px; }
-.tour-brand span { font-family: var(--font-sans); font-size: 12px; color: #526560; align-self: center; }
-.landscape { height: 180px; position: relative; overflow: hidden; }
-.landscape svg { width: 100%; height: 100%; }
-.landscape > span { position: absolute; bottom: var(--space-3); left: var(--space-5); color: #fff; font-family: var(--font-serif); font-size: 24px; line-height: 36px; text-shadow: 0 1px 10px #18322e; }
-.tour-body { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-5); padding: var(--space-5); }
-.tour-body .eyebrow { font-size: 14px; line-height: 20px; margin-bottom: var(--space-1); color: #526560; }
-.tour-body h4 { font-family: var(--font-serif); font-size: 24px; line-height: 36px; margin-bottom: var(--space-3); }
-.tour-body p { font-size: 14px; line-height: 20px; margin: 0 0 var(--space-3); }
-.trip-facts { display: flex; flex-wrap: wrap; gap: var(--space-1); font-size: 12px; line-height: 16px; margin-bottom: var(--space-5); }
-.trip-facts span { border: 1px solid #d7ded6; padding: var(--space-1) var(--space-3); }
-details { font-size: 14px; line-height: 20px; }
-summary { cursor: pointer; font-weight: 600; }
-details ol { padding-left: var(--space-5); }
-details li { margin: var(--space-1) 0; }
-.booking { background: #f0f3e9; padding: var(--space-3); align-self: start; display: flex; flex-direction: column; gap: var(--space-3); }
-.booking strong { font-size: 14px; }
-.booking label { font-size: 12px; line-height: 16px; }
-.booking input { font-size: 14px; width: 100%; background: #fff; color: #2b2f2e; border-color: #2b2f2e; }
-.booking button { font-size: 14px; padding: var(--space-1) var(--space-3); background: #1d6658; border-color: #1d6658; color: #fff; }
-.booking button:hover { background: #124e43; color: #fff; }
-.booking p { font-size: 12px; line-height: 16px; margin: 0; }
-.tour-frame.mobile .tour-body { grid-template-columns: 1fr; }
-.tour-frame.mobile .landscape { height: 155px; }
-.tour-frame.mobile .tour-brand span { display: none; }
+.portfolio-page .tour-demo { background: var(--band); }
+.portfolio-page .tour-frame { background: #fffefa; color: #2b2f2e; max-width: 100%; margin: 0 auto; transition: max-width var(--duration-medium) var(--easing-jo-ha-kyu); }
+.portfolio-page .tour-frame h4, .portfolio-page .tour-frame p, .portfolio-page .tour-frame li, .portfolio-page .tour-frame summary, .portfolio-page .tour-frame strong, .portfolio-page .tour-frame label { color: #2b2f2e; }
+.portfolio-page .tour-frame.mobile { max-width: 330px; }
+.portfolio-page .tour-brand { display: flex; justify-content: space-between; padding: var(--space-3) var(--space-5); font-family: var(--display); font-size: 18px; line-height: 28px; }
+.portfolio-page .tour-brand span { font-family: var(--sans); font-size: 12px; color: #526560; align-self: center; }
+.portfolio-page .landscape { height: 180px; position: relative; overflow: hidden; }
+.portfolio-page .landscape svg { width: 100%; height: 100%; }
+.portfolio-page .landscape > span { position: absolute; bottom: var(--space-3); left: var(--space-5); color: #fff; font-family: var(--display); font-size: 24px; line-height: 36px; text-shadow: 0 1px 10px #18322e; }
+.portfolio-page .tour-body { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-5); padding: var(--space-5); }
+.portfolio-page .tour-body .eyebrow { font-size: 14px; line-height: 20px; margin-bottom: var(--space-1); color: #526560; }
+.portfolio-page .tour-body h4 { font-family: var(--display); font-size: 24px; line-height: 36px; margin-bottom: var(--space-3); }
+.portfolio-page .tour-body p { font-size: 14px; line-height: 20px; margin: 0 0 var(--space-3); }
+.portfolio-page .trip-facts { display: flex; flex-wrap: wrap; gap: var(--space-1); font-size: 12px; line-height: 16px; margin-bottom: var(--space-5); }
+.portfolio-page .trip-facts span { border: 1px solid #d7ded6; padding: var(--space-1) var(--space-3); }
+.portfolio-page details { font-size: 14px; line-height: 20px; }
+.portfolio-page summary { cursor: pointer; font-weight: 600; }
+.portfolio-page details ol { padding-left: var(--space-5); }
+.portfolio-page details li { margin: var(--space-1) 0; }
+.portfolio-page .booking { background: #f0f3e9; padding: var(--space-3); align-self: start; display: flex; flex-direction: column; gap: var(--space-3); }
+.portfolio-page .booking strong { font-size: 14px; }
+.portfolio-page .booking label { font-size: 12px; line-height: 16px; }
+.portfolio-page .booking input { font-size: 14px; width: 100%; background: #fff; color: #2b2f2e; border-color: #2b2f2e; }
+.portfolio-page .booking button { font-size: 14px; padding: var(--space-1) var(--space-3); background: #1d6658; border-color: #1d6658; color: #fff; }
+.portfolio-page .booking button:hover { background: #124e43; color: #fff; }
+.portfolio-page .booking p { font-size: 12px; line-height: 16px; margin: 0; }
+.portfolio-page .tour-frame.mobile .tour-body { grid-template-columns: 1fr; }
+.portfolio-page .tour-frame.mobile .landscape { height: 155px; }
+.portfolio-page .tour-frame.mobile .tour-brand span { display: none; }
 
-/* Finance: a section marked by a rule, not a fill */
-.finance-section { border-top: 1px solid var(--ink-secondary); padding: var(--space-15) 0 var(--space-9); }
-.finance-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: var(--space-15); }
-.finance-card { border-top: 1px solid var(--ink-secondary); padding: var(--space-7) 0 0; }
-.finance-card h3 { font-size: 24px; line-height: 36px; }
-.finance-card > p:not(.eyebrow) { font-size: 16px; line-height: 24px; }
-.numbers { margin: var(--space-5) 0; }
-.numbers > div { display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-3) 0; border-bottom: 1px solid var(--ink-secondary); font-size: 14px; line-height: 20px; }
-.numbers dd { font-weight: 600; white-space: nowrap; margin: 0; font-variant-numeric: lining-nums tabular-nums; text-align: right; }
-.recon { border-left: 1px solid var(--ink-secondary); padding: var(--space-1) 0 var(--space-1) var(--space-5); margin-bottom: var(--space-5); font-size: 14px; line-height: 20px; font-variant-numeric: lining-nums tabular-nums; }
-.recon p { margin: 0 0 var(--space-3); }
-.recon p:last-child { margin: var(--space-3) 0 0; }
-.royalty-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
-.royalty-inputs label { display: flex; flex-direction: column; font-size: 14px; line-height: 20px; font-weight: 600; gap: var(--space-1); }
-.royalty-inputs input { width: 100%; font-size: 16px; font-weight: 400; }
-.finance-note { font-size: 12px; line-height: 16px; color: var(--ink-secondary); margin: var(--space-9) 0 0; max-width: 75ch; }
-#royalty-status { font-size: 14px; line-height: 20px; color: var(--error); min-height: 20px; }
+.portfolio-page .finance-section { border-top: 1px solid var(--body); padding: var(--space-15) 0 var(--space-9); }
+.portfolio-page .finance-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: var(--space-15); }
+.portfolio-page .finance-card { border-top: 1px solid var(--body); padding: var(--space-7) 0 0; }
+.portfolio-page .finance-card h3 { font-size: 24px; line-height: 36px; }
+.portfolio-page .finance-card > p:not(.eyebrow) { font-size: 16px; line-height: 24px; }
+.portfolio-page .numbers { margin: var(--space-5) 0; }
+.portfolio-page .numbers > div { display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-3) 0; border-bottom: 1px solid var(--body); font-size: 14px; line-height: 20px; }
+.portfolio-page .numbers dd { font-weight: 600; white-space: nowrap; margin: 0; font-variant-numeric: lining-nums tabular-nums; text-align: right; }
+.portfolio-page .recon { border-left: 1px solid var(--body); padding: var(--space-1) 0 var(--space-1) var(--space-5); margin-bottom: var(--space-5); font-size: 14px; line-height: 20px; font-variant-numeric: lining-nums tabular-nums; }
+.portfolio-page .recon p { margin: 0 0 var(--space-3); }
+.portfolio-page .recon p:last-child { margin: var(--space-3) 0 0; }
+.portfolio-page .royalty-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.portfolio-page .royalty-inputs label { display: flex; flex-direction: column; font-size: 14px; line-height: 20px; font-weight: 600; gap: var(--space-1); }
+.portfolio-page .royalty-inputs input { width: 100%; font-size: 16px; font-weight: 400; }
+.portfolio-page .finance-note { font-size: 12px; line-height: 16px; color: var(--body); margin: var(--space-9) 0 0; max-width: 75ch; }
+.portfolio-page #royalty-status { font-size: 14px; line-height: 20px; color: var(--error); min-height: 20px; }
 
-.availability { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-21); padding: var(--space-5) 0 var(--space-15); }
-.availability > div > p:not(.eyebrow) { font-size: 16px; line-height: 24px; max-width: 470px; }
-.working > div { display: flex; gap: var(--space-5); padding: var(--space-5) 0; border-top: 1px solid var(--ink-secondary); }
-.working span { font-size: 12px; line-height: 16px; color: var(--ink-secondary); padding-top: var(--space-1); font-variant-numeric: lining-nums tabular-nums; }
-.working p { font-size: 14px; line-height: 20px; margin: 0; }
+.portfolio-page .availability { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-21); padding: var(--space-5) 0 var(--space-15); }
+.portfolio-page .availability > div > p:not(.eyebrow) { font-size: 16px; line-height: 24px; max-width: 470px; }
+.portfolio-page .working > div { display: flex; gap: var(--space-5); padding: var(--space-5) 0; border-top: 1px solid var(--body); }
+.portfolio-page .working span { font-size: 12px; line-height: 16px; color: var(--body); padding-top: var(--space-1); font-variant-numeric: lining-nums tabular-nums; }
+.portfolio-page .working p { font-size: 14px; line-height: 20px; margin: 0; }
 
-footer { display: flex; justify-content: space-between; align-items: center; gap: var(--space-5); padding-top: var(--space-7); padding-bottom: var(--space-7); border-top: 1px solid var(--ink-secondary); font-size: 12px; line-height: 16px; }
-footer p { color: var(--ink-secondary); }
-.skip { position: absolute; top: -80px; left: var(--space-5); padding: var(--space-3); background: var(--ink); color: var(--on-ink); z-index: 10; }
-.skip:focus { top: var(--space-3); }
+.portfolio-page .skip { position: absolute; top: -80px; left: var(--space-5); padding: var(--space-3); background: var(--ink); color: var(--ground); z-index: 10; }
+.portfolio-page .skip:focus { top: var(--space-3); }
 
 @media (max-width: 900px) {
-  .wrap { padding-left: var(--space-7); padding-right: var(--space-9); }
-  .hero { gap: var(--space-9); padding-top: var(--space-21); grid-template-columns: 1.2fr 1fr; }
-  .case { gap: var(--space-7); grid-template-columns: .6fr 1.4fr; }
-  .section-head { gap: var(--space-7); }
-  .availability, .finance-grid { gap: var(--space-9); }
+  .portfolio-page .wrap { padding-left: var(--space-7); padding-right: var(--space-9); }
+  .portfolio-page .hero { gap: var(--space-9); padding-top: var(--space-21); grid-template-columns: 1.2fr 1fr; }
+  .portfolio-page .case { gap: var(--space-7); grid-template-columns: .6fr 1.4fr; }
+  .portfolio-page .section-head { gap: var(--space-7); }
+  .portfolio-page .availability, .portfolio-page .finance-grid { gap: var(--space-9); }
 }
 
 @media (max-width: 680px) {
-  .wrap { padding-left: var(--space-5); padding-right: var(--space-5); }
-  .header { flex-wrap: wrap; gap: var(--space-3); }
-  .header nav { order: 3; flex-basis: 100%; gap: var(--space-7); }
-  .hero { grid-template-columns: 1fr; gap: var(--space-9); padding-top: var(--space-15); padding-bottom: var(--space-9); }
-  h1 { font-size: 36px; line-height: 48px; }
-  h2 { font-size: 24px; line-height: 36px; }
-  .section { padding-top: var(--space-9); padding-bottom: var(--space-9); }
-  .section-head { display: block; margin-bottom: var(--space-7); }
-  .section-head > p { margin-top: var(--space-3); }
-  .case { grid-template-columns: 1fr; gap: var(--space-5); padding: var(--space-7) 0 var(--space-9); }
-  .products { gap: var(--space-3); padding: var(--space-3); }
-  .product-art { height: 95px; font-size: 48px; }
-  .cart-row { padding: var(--space-3); flex-wrap: wrap; }
-  .cart-row button { margin-left: auto; }
-  .staff { padding: var(--space-3); }
-  .demo-bar { padding: var(--space-3); }
-  .pipeline { gap: var(--space-3); padding: 0 var(--space-3) var(--space-3); }
-  .crm-controls { padding: var(--space-3); }
-  .crm-controls span { flex-basis: 100%; margin-left: 0; }
-  .tour-body { grid-template-columns: 1fr; }
-  .landscape { height: 155px; }
-  .tour-brand span { display: none; }
-  .finance-section { padding: var(--space-9) 0; }
-  .finance-grid { grid-template-columns: 1fr; gap: var(--space-9); }
-  .availability { grid-template-columns: 1fr; gap: var(--space-5); }
-  footer { flex-wrap: wrap; gap: var(--space-1); }
-  footer p { flex-basis: 100%; order: 3; margin: 0; }
-  .royalty-inputs { grid-template-columns: 1fr; }
+  .portfolio-page .wrap { padding-left: var(--space-5); padding-right: var(--space-5); }
+  .portfolio-page .hero { grid-template-columns: 1fr; gap: var(--space-9); padding-top: var(--space-15); padding-bottom: var(--space-9); }
+  .portfolio-page h1 { font-size: 36px; line-height: 48px; }
+  .portfolio-page h2 { font-size: 24px; line-height: 36px; }
+  .portfolio-page .section { padding-top: var(--space-9); padding-bottom: var(--space-9); }
+  .portfolio-page .section-head { display: block; margin-bottom: var(--space-7); }
+  .portfolio-page .section-head > p { margin-top: var(--space-3); }
+  .portfolio-page .case { grid-template-columns: 1fr; gap: var(--space-5); padding: var(--space-7) 0 var(--space-9); }
+  .portfolio-page .products { gap: var(--space-3); padding: var(--space-3); }
+  .portfolio-page .product-art { height: 95px; font-size: 48px; }
+  .portfolio-page .cart-row { padding: var(--space-3); flex-wrap: wrap; }
+  .portfolio-page .cart-row button { margin-left: auto; }
+  .portfolio-page .staff { padding: var(--space-3); }
+  .portfolio-page .demo-bar { padding: var(--space-3); }
+  .portfolio-page .pipeline { gap: var(--space-3); padding: 0 var(--space-3) var(--space-3); }
+  .portfolio-page .crm-controls { padding: var(--space-3); }
+  .portfolio-page .crm-controls span { flex-basis: 100%; margin-left: 0; }
+  .portfolio-page .tour-body { grid-template-columns: 1fr; }
+  .portfolio-page .landscape { height: 155px; }
+  .portfolio-page .tour-brand span { display: none; }
+  .portfolio-page .finance-section { padding: var(--space-9) 0; }
+  .portfolio-page .finance-grid { grid-template-columns: 1fr; gap: var(--space-9); }
+  .portfolio-page .availability { grid-template-columns: 1fr; gap: var(--space-5); }
+  .portfolio-page .royalty-inputs { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: 0ms !important; }
+  .portfolio-page html { scroll-behavior: auto; }
+  .portfolio-page *, .portfolio-page *::before, .portfolio-page *::after { transition-duration: 0ms !important; }
 }
 
 @media print {
-  button, .view-switch, nav, .button, .skip { display: none; }
-  .hero { padding-top: var(--space-7); padding-bottom: var(--space-7); }
-  .case { break-inside: avoid; }
-  .wrap { padding-left: 0; padding-right: 0; }
-  .section, .finance-section { padding-top: var(--space-7); padding-bottom: var(--space-7); }
+  .portfolio-page button, .portfolio-page .view-switch, .portfolio-page nav, .portfolio-page .button, .portfolio-page .skip { display: none; }
+  .portfolio-page .hero { padding-top: var(--space-7); padding-bottom: var(--space-7); }
+  .portfolio-page .case { break-inside: avoid; }
+  .portfolio-page .wrap { padding-left: 0; padding-right: 0; }
+  .portfolio-page .section, .portfolio-page .finance-section { padding-top: var(--space-7); padding-bottom: var(--space-7); }
 }
+
+.portfolio-page { color: var(--body); font-family: var(--sans); }
+.portfolio-page .portfolio-nav { display: flex; flex-wrap: wrap; gap: 24px; padding-top: 24px; font-size: 14px; }
+.portfolio-page .portfolio-source { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 24px; padding-bottom: 40px; border-top: 1px solid var(--line); }
+.portfolio-page .portfolio-source p { margin: 0; }
+
+.portfolio-page .button { background: var(--grad); border-color: transparent; color: #fff; box-shadow: 0 8px 22px rgba(79, 70, 229, .2); }
+.portfolio-page .case > *, .portfolio-page .product { min-width: 0; }
+.portfolio-page .demo-bar { flex-wrap: wrap; }
+@media (max-width: 680px) {
+  .portfolio-page .pipeline { grid-template-columns: 1fr; }
+  .portfolio-page .lane { min-height: 0; }
+  .portfolio-page .products { grid-template-columns: 1fr; }
+  .portfolio-page .product { display: grid; grid-template-columns: 72px 1fr; gap: 0 12px; align-items: center; }
+  .portfolio-page .product-art { grid-row: span 3; height: 96px; }
+  .portfolio-page .product button { grid-column: 2; }
+}
+.portfolio-page .button span { color: #fff; }
