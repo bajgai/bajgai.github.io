@@ -1,0 +1,45 @@
+// Shop ledger: paper, carbon ink, and rust stamps.
+:root {
+  --paper: #F6F3EC;
+  --band: #EFECE4;
+  --ticket: #FAF8F5;
+  --ink: #1C1B18;
+  --text: #1C1B18;
+  --body: #4A473E;
+  --muted: #5E5A50;
+  --prose: #4A473E;
+  --rust: #9E3B22;
+  --rust-dark: #7A2B17;
+  --tint: #F3E5E0;
+  --line: #D6D0C4;
+  --rule-medium: #B8B0A0;
+  --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --display: 'Newsreader', Georgia, serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --font-sans: var(--sans);
+  --font-serif: var(--display);
+  --font-mono: var(--mono);
+  --ground: var(--paper);
+  --on-ink: var(--ticket);
+  --ink-secondary: var(--body);
+  --accent: var(--rust);
+  --danger: var(--rust-dark);
+  --positive: var(--ink);
+  --radius-control: 0px;
+  --radius-card: 0px;
+  --space-xs: 4px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 28px;
+  --space-xl: 36px;
+  --space-section: 60px;
+  --space-hero: 84px;
+  --motion-fast: 180ms;
+  --motion-normal: 300ms;
+  --motion-pause: 60ms;
+  --motion-ease: ease;
+  --reading-leading: 28px;
+  --caps-tracking: 0.05em;
+  --eyebrow-tracking: 0.05em;
+  color-scheme: light;
+}

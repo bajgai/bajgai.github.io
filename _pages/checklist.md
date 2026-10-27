@@ -2,27 +2,10 @@
 layout: page
 title: Automation readiness checklist
 permalink: /checklist/
+page_class: checklist-page
 description: A printable 10-question checklist that shows whether your small business is ready to automate, and what to sort out first.
 ---
 
-<style>
-.checklist ol { padding-left: 1.5em; }
-.checklist li { margin-bottom: 1em; break-inside: avoid; }
-.checklist .box { display: inline-block; width: 1em; height: 1em; border: 1px solid currentColor; margin-right: 0.5em; vertical-align: -0.1em; }
-.checklist .answer { display: block; margin-top: 0.25em; }
-.checklist .notes { display: block; border-bottom: 1px solid currentColor; height: 1.75em; margin-top: 0.25em; }
-.print-button { font: inherit; padding: 0.5em 1em; border: 1px solid currentColor; background: none; color: inherit; cursor: pointer; border-radius: 4px 0 0 0; }
-@media print {
-  body > header, footer, nav, .print-button, .no-print, .post-description { display: none !important; }
-  body { background: #fff !important; color: #000 !important; padding: 0 !important; }
-  .post-header { margin: 0 0 0.5em !important; padding: 0 !important; }
-  .post-title { font-size: 22pt !important; margin: 0 !important; }
-  .post article .checklist, .post article .checklist p, .post article .checklist li { font-size: 10.5pt !important; line-height: 1.35 !important; }
-  .post article .checklist p { margin-bottom: 0.5em !important; }
-  .checklist li { margin-bottom: 0.6em; }
-  @page { margin: 1.5cm; }
-}
-</style>
 
 <div class="checklist">
 

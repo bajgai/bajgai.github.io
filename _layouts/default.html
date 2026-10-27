@@ -10,41 +10,47 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  <body>
 
     <!-- Header -->
     {%- include header.html %}
 
     <!-- Content -->
-    <div class="container mt-5">
-      {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == "right" %}
-        <div class="row">
-          <!-- main content area -->
-          <div class="col-sm-9">
-            {{ content }}
-          </div>
-          <!-- sidebar, which will move to the top on a small screen -->
-          <div class="col-sm-3">
-            <nav id="toc-sidebar" class="sticky-top"></nav>
-          </div>
-        </div>
-        {% else %}
-        <div class="row">
-          <!-- sidebar, which will move to the top on a small screen -->
-          <div class="col-sm-3">
-            <nav id="toc-sidebar" class="sticky-top"></nav>
-          </div>
-          <!-- main content area -->
-          <div class="col-sm-9">
-            {{ content }}
-          </div>
-        </div>
-        {% endif %}
-      {% else %}
+    {% if page.full_width %}
+      <main id="main-content">
         {{ content }}
-      {% endif %}
-    </div>
+      </main>
+    {% else %}
+      <main id="main-content" class="container mt-4 mb-5" style="max-width: 1160px; min-height: 60vh;">
+        {% if page.toc and page.toc.sidebar %}
+          {% if page.toc.sidebar == "right" %}
+          <div class="row">
+            <!-- main content area -->
+            <div class="col-sm-9">
+              {{ content }}
+            </div>
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-3">
+              <nav id="toc-sidebar" class="sticky-top"></nav>
+            </div>
+          </div>
+          {% else %}
+          <div class="row">
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-3">
+              <nav id="toc-sidebar" class="sticky-top"></nav>
+            </div>
+            <!-- main content area -->
+            <div class="col-sm-9">
+              {{ content }}
+            </div>
+          </div>
+          {% endif %}
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </main>
+    {% endif %}
 
     <!-- Footer -->
     {%- include footer.html %}

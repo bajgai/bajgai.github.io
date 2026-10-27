@@ -1,9 +1,13 @@
 ---
-layout: page
+layout: default
 permalink: /404.html
 title: "Page not found"
 description: "Looks like there has been a mistake. Nothing exists here."
-redirect: true
+full_width: true
 ---
-
-<p>You will be redirected to the main page within 3 seconds. If not redirected, please go back to the <a href="{{ site.baseurl }}/">home page</a>.</p>
+<section class="post-measure">
+  <p class="eyebrow">Page 404</p>
+  <h1>Page not found</h1>
+  <p>Looks like there has been a mistake. Nothing exists here.</p>
+  <p><a class="page-link" href="{{ '/' | relative_url }}">Home</a> · <a class="page-link" href="{{ '/services/' | relative_url }}">Services</a></p>
+</section>

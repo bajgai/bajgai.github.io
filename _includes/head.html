@@ -10,9 +10,10 @@
     <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@{{ site.bootstrap-table.version }}/dist/bootstrap-table.min.css">
 
     <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
-    <link rel="preload" href="{{ '/assets/fonts/sanzo/SourceSans3VF-Upright.otf.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ '/assets/fonts/sanzo/SourceSerif4Variable-Roman.otf.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url | bust_file_cache }}" media="" id="highlight_theme_light" />
@@ -27,12 +28,11 @@
     <script defer src="https://tikzjax.com/v1/tikzjax.js"></script>
     {% endif %}
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
+
     <!-- Styles -->
-    {% if site.icon.size <= 4 %}
-    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ site.icon }}</text></svg>">
-    {% elsif site.icon != blank %}
-    <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}"/>
-    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 

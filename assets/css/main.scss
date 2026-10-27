@@ -8,7 +8,7 @@ $max-content-width: {{ site.max_width }};
 
 @import
   "variables",
-  "sanzo-tokens",
+  "tokens",
   "themes",
   "layout",
   "base",
@@ -18,5 +18,7 @@ $max-content-width: {{ site.max_width }};
   "font-awesome/brands",
   "font-awesome/solid",
   "font-awesome/regular",
-  "sanzo-theme"
+  "components"
 ;
+
+@import "ledger";

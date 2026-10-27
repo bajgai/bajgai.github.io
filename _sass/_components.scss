@@ -1,0 +1,215 @@
+// Component styles and theme overrides matching Claude Design system
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--paper);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--rust);
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--rust-dark);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+// Navigation responsive behavior
+.nb-menu {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .nb-links {
+    display: none !important;
+  }
+  .nb-menu {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .nb-mark {
+    display: none !important;
+  }
+}
+
+@media (min-width: 761px) {
+  .nb-drawer {
+    display: none !important;
+  }
+}
+
+// Post layout (680px measure, >=18px body)
+.post-measure {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: clamp(48px, 7vw, 88px) 24px clamp(64px, 9vw, 104px);
+}
+
+.post-content-body {
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--prose);
+
+  p {
+    margin: 0 0 1.5em;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    margin: 1.8em 0 0.6em;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 1.5em 0 0.5em;
+  }
+
+  ul, ol {
+    margin: 0 0 1.5em;
+    padding-left: 26px;
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  blockquote, aside.callout {
+    margin: 1.5em 0;
+    padding: 24px 26px;
+    border-radius: 0;
+    background: var(--tint);
+    border: 1px solid var(--line);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  pre, code {
+    font-family: var(--mono);
+    font-size: 0.9em;
+  }
+
+  pre {
+    background: var(--band);
+    border: 1px solid var(--line);
+    border-radius: 0;
+    padding: 16px 20px;
+    overflow-x: auto;
+  }
+}
+
+// Overrides for legacy pages (/projects, /repositories, /thanks, /checklist)
+.container {
+  max-width: 1160px;
+}
+
+// Remove fixed footer override
+footer.fixed-bottom {
+  position: static !important;
+}
+
+// Shared interaction targets and keyboard treatment.
+:focus-visible { outline: 2px solid var(--rust); outline-offset: 3px; }
+footer :focus-visible { outline-color: var(--body); }
+.nb-links a, .nb-drawer a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px;
+  border-radius: 0; color: var(--body); font-weight: 500; text-decoration: none; white-space: nowrap;
+  &:hover { color: var(--ink); background: var(--band); }
+  &[aria-current="page"] { color: var(--ink); background: var(--tint); font-weight: 600; }
+}
+.nb-drawer a { display: flex; min-height: 48px; border-bottom: 1px solid var(--line); }
+.nb-book {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px;
+  border: 1px solid var(--rust); border-radius: 0; background: var(--rust);
+  color: var(--paper); font-weight: 600; white-space: nowrap;
+  &:hover { color: var(--paper); background: var(--rust-dark); }
+  &.nb-book-secondary { background: var(--paper); color: var(--rust); }
+  &.nb-book-secondary:hover { background: var(--tint); }
+}
+.pagination { display: flex; justify-content: center; margin: 40px 0; }
+.pagination ul { display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; gap: 8px; align-items: center; }
+.pagination .page-link {
+  min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center;
+  padding: 0 14px; border: 1px solid var(--line); border-radius: 0; color: var(--text); font-size: 15px;
+  &:hover { background: var(--band); color: var(--rust); }
+  &[aria-current="page"] { background: var(--tint); color: var(--ink); font-weight: 600; }
+}
+footer a { min-height: 44px; display: inline-flex; align-items: center; }
+footer a:hover { text-decoration: underline !important; text-underline-offset: 4px; }
+.checklist-page { max-width: 680px; margin: 48px auto 64px; color: var(--text); }
+.checklist-page h1 { font-family: var(--display); line-height: 1.1; }
+.checklist { font-size: 18px; line-height: 1.75; }
+.checklist a { display: inline-flex; align-items: center; min-height: 44px; }
+.checklist .print-button { min-height: 44px; color: var(--rust); border-color: var(--muted); border-radius: 0; }
+.checklist ol { padding-left: 1.5em; }
+.checklist li { margin-bottom: 1em; break-inside: avoid; }
+.checklist .box { display: inline-block; width: 1em; height: 1em; border: 1px solid currentColor; margin-right: 0.5em; vertical-align: -0.1em; }
+.checklist .answer { display: block; margin-top: 0.25em; }
+.checklist .notes { display: block; border-bottom: 1px solid currentColor; height: 1.75em; margin-top: 0.25em; }
+.checklist .print-button { font: inherit; padding: 0.5em 1em; border: 1px solid var(--muted); background: none; color: var(--rust); cursor: pointer; border-radius: 0; }
+@media print {
+  body > header, footer, nav, .print-button, .no-print, .post-description { display: none !important; }
+  body { background: var(--paper) !important; color: #000 !important; padding: 0 !important; }
+  .post-header { margin: 0 0 0.5em !important; padding: 0 !important; }
+  .post-title { font-size: 22pt !important; margin: 0 !important; }
+  .post article .checklist, .post article .checklist p, .post article .checklist li { font-size: 10.5pt !important; line-height: 1.35 !important; }
+  .post article .checklist p { margin-bottom: 0.5em !important; }
+  .checklist li { margin-bottom: 0.6em; }
+  @page { margin: 1.5cm; }
+}
+
+h3, h4, h5, h6 { font-family: var(--sans); font-weight: 700; color: var(--ink); }
+
+// Example event sequences echo the lead timeline, without card walls.
+.workflow-list { border-top: 1px solid var(--line); }
+.workflow-row { display: grid; grid-template-columns: minmax(230px, 0.85fr) minmax(0, 1.6fr); gap: 48px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.workflow-time { display: flex; flex-direction: column; gap: 10px; padding-left: 20px; border-left: 2px solid var(--rust); font-family: var(--mono); font-size: 14px; line-height: 1.6; color: var(--muted); }
+.workflow-time span { color: inherit; }
+.workflow-time span:last-child { color: var(--rust); }
+.workflow-copy { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+@media (max-width: 760px) {
+  .workflow-row { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 28px 0; }
+}
+
+.nb-links { display: flex; align-items: center; gap: 4px; }
+.nb-drawer { display: none; flex-direction: column; padding: 4px 20px 16px; border-top: 1px solid var(--line); background: var(--paper); }
