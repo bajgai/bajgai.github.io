@@ -1,0 +1,51 @@
+// Resource directory: a task index beside ruled listings, using the shared ledger.
+.resource-page { padding-top: 64px; padding-bottom: 72px; }
+.resource-catalog { display: grid; grid-template-columns: 250px minmax(0, 1fr); column-gap: 70px; }
+.resource-heading { grid-column: 1 / -1; padding-bottom: 40px; margin-bottom: 40px; }
+.resource-heading h1 { max-width: 20ch; }
+.resource-heading p { max-width: 70ch; margin: 24px 0 0; font-size: 18px; line-height: 1.75; color: var(--body); }
+.resource-index { grid-column: 1; grid-row: 2 / span 20; align-self: start; border-top: 2px solid var(--ink); }
+.resource-index h2 { font-family: var(--sans); font-size: 16px; font-weight: 600; letter-spacing: 0; margin: 24px 0 12px; }
+.resource-catalog .resource-index ul { list-style: none; padding: 0; margin: 0; }
+.resource-index li { border-bottom: 1px solid var(--rule-medium); }
+.resource-page a { color: var(--rust); text-decoration: underline; display: inline-flex; align-items: center; min-height: 44px; }
+.resource-index a { width: 100%; font-size: 14px; line-height: 1.6; padding: 12px 0; color: var(--ink); text-decoration: none; }
+.resource-index a:hover { color: var(--rust); text-decoration: underline; }
+.resource-catalog > .ledger-section { grid-column: 2; padding: 36px 0; }
+.resource-catalog > .ledger-section:first-of-type { padding-top: 0; }
+.resource-catalog .ledger-section h2 { max-width: 30ch; }
+.resource-catalog .ledger-section h3 { margin-top: 32px; }
+.resource-catalog p, .resource-catalog li { font-size: 16px; line-height: 1.8; color: var(--body); }
+.resource-catalog p { margin-bottom: 20px; }
+.resource-catalog strong { color: var(--ink); }
+.resource-catalog ul { padding-left: 22px; }
+.resource-catalog li { padding-bottom: 8px; }
+.resource-catalog [id] { scroll-margin-top: 24px; }
+.resource-page[data-kind="portfolio"] section ul { list-style: none; padding: 0; margin-bottom: 28px; }
+.resource-page[data-kind="portfolio"] li[data-product-id] { border-top: 1px solid var(--rule-medium); padding: 8px 0; }
+.resource-page[data-kind="portfolio"] li[data-product-id] > a { font-weight: 500; }
+.resource-page[data-kind="portfolio"] li[data-product-id] > p { font-size: 14px; margin: 8px 0 16px; }
+.resource-page[data-kind="portfolio"] li[data-product-id] > ul { margin: 0 0 0 20px; border-left: 2px solid var(--rust); padding-left: 20px; }
+.resource-page[data-kind="cleaning"] .resource-heading h1 { font-size: 56px; max-width: 24ch; }
+.resource-back { margin: -20px 0 24px; font-size: 14px; }
+.resource-page[data-kind="cleaning"] section[data-product-id] > p:last-child { margin-bottom: 0; }
+.resource-page[data-kind="cleaning"] section[data-product-id] > p:last-child a { border: 1px solid var(--rust); padding: 10px 16px; background: var(--ticket); font-weight: 600; }
+.resource-page[data-kind="cleaning"] section[data-product-id] > p:last-child a:hover { background: var(--tint); }
+.resource-page[data-kind="cleaning"] section section { padding: 36px 0; border-bottom: 1px solid var(--rule-medium); }
+.resource-page[data-kind="cleaning"] section section:last-child { border-bottom: 0; padding-bottom: 0; }
+.resource-page[data-kind="cleaning"] section section h3 { margin-top: 0; }
+.resource-end { font-size: 14px; }
+@media (max-width: 900px) {
+  .resource-catalog { grid-template-columns: 210px minmax(0, 1fr); column-gap: 36px; }
+}
+@media (max-width: 760px) {
+  .resource-page { padding-top: 40px; padding-bottom: 44px; }
+  .resource-catalog { display: block; }
+  .resource-heading { margin-bottom: 28px; padding-bottom: 28px; }
+  .resource-heading h1, .resource-page[data-kind="cleaning"] .resource-heading h1 { font-size: 42px; }
+  .resource-heading p { font-size: 16px; }
+  .resource-index { margin-bottom: 40px; border-top: 0; }
+  .resource-catalog > .ledger-section { padding: 32px 0; }
+  .resource-catalog .ledger-section h2 { font-size: 32px; }
+  .resource-page[data-kind="portfolio"] li[data-product-id] > ul { margin-left: 0; padding-left: 16px; }
+}
