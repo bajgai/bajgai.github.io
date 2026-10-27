@@ -1,0 +1,40 @@
+// Design tokens extracted from Claude Design authoritative outputs
+:root {
+  --sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --display: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --ink: #12141f;
+  --text: #1c2030;
+  --body: #4a5163;
+  --muted: #5b6275;
+  --line: #e4e6ef;
+  --band: #f7f8fc;
+  --tint: #eef0fb;
+  --indigo: #4f46e5;
+  --violet: #7c3aed;
+  --grad: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  --prose: #353b4c;
+
+  // Sanzo compatibility tokens
+  --ground: #ffffff;
+  --on-ink: #ffffff;
+  --font-sans: var(--sans);
+  --font-serif: var(--display);
+  --font-mono: var(--mono);
+  --ink-secondary: var(--body);
+
+  // al-folio global mappings
+  --global-bg-color: #ffffff;
+  --global-code-bg-color: var(--band);
+  --global-text-color: var(--text);
+  --global-text-color-light: var(--body);
+  --global-theme-color: var(--indigo);
+  --global-hover-color: #3730a3;
+  --global-hover-text-color: #ffffff;
+  --global-footer-bg-color: #12141f;
+  --global-footer-text-color: #c4c8d6;
+  --global-footer-link-color: #ffffff;
+  --global-divider-color: var(--line);
+  --global-card-bg-color: #ffffff;
+}

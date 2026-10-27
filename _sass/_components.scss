@@ -1,0 +1,149 @@
+// Component styles and theme overrides matching Claude Design system
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--indigo);
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #3730a3;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--display);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+// Navigation responsive behavior
+.nb-menu {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .nb-links {
+    display: none !important;
+  }
+  .nb-menu {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .nb-mark {
+    display: none !important;
+  }
+}
+
+@media (min-width: 761px) {
+  .nb-drawer {
+    display: none !important;
+  }
+}
+
+// Post layout (680px measure, >=18px body)
+.post-measure {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: clamp(48px, 7vw, 88px) 24px clamp(64px, 9vw, 104px);
+}
+
+.post-content-body {
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--prose);
+
+  p {
+    margin: 0 0 1.5em;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    margin: 1.8em 0 0.6em;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 1.5em 0 0.5em;
+  }
+
+  ul, ol {
+    margin: 0 0 1.5em;
+    padding-left: 26px;
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  blockquote, aside.callout {
+    margin: 1.5em 0;
+    padding: 24px 26px;
+    border-radius: 18px;
+    background: var(--tint);
+    border: 1px solid #d9dcf5;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  pre, code {
+    font-family: var(--mono);
+    font-size: 0.9em;
+  }
+
+  pre {
+    background: var(--band);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 20px;
+    overflow-x: auto;
+  }
+}
+
+// Overrides for legacy pages (/projects, /repositories, /thanks, /checklist)
+.container {
+  max-width: 1160px;
+}
+
+// Remove fixed footer override
+footer.fixed-bottom {
+  position: static !important;
+}
