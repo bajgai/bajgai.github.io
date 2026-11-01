@@ -10,3 +10,4 @@ Gemfile.lock
 vendor
 .playwright-cli/
 
+plans/
